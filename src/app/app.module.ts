@@ -5,6 +5,7 @@ import { AppRoutingModule } from '@router/app-routing.module';
 import { AppComponent } from './app.component';
 import { OpenapiMobileClientComponent } from './pages/openapi-mobile-client/openapi-mobile-client.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,10 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+
+    // TODO: Move materials modules into some module
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

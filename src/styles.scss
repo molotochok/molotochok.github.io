@@ -4,3 +4,10 @@
     font-family: "Heebo", sans-serif;
     font-weight: 400;
 }
+
+// TODO: This could not be very correct as I can use only parent div
+.app-center {
+    display: flex;
+    justify-content: center;
+    align-items: center; // TODO: Maybe I don't need this here
+}

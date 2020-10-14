@@ -1,0 +1,8 @@
+// TODO: Probably should remove this as this makes code look ugly
+
+@use "@material/image-list/mdc-image-list";
+@use "@material/image-list";
+ 
+.my-image-list {
+  @include image-list.standard-columns(5);
+}
