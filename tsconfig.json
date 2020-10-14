@@ -2,6 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@components/*": ["src/app/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@router/*": ["src/app/router/*"],
+      "@models/*": ["src/app/models/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
