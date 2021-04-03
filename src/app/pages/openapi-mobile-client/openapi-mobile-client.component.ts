@@ -15,9 +15,4 @@ export class OpenapiMobileClientComponent implements OnInit {
   constructor(private translator: I18nPipe) {}
 
   ngOnInit() {}
-
-  change_language(locale) {
-    this.translator.changeLanguage(locale);
-  }
-
 }

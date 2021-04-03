@@ -1,64 +1,33 @@
-<!-- TODO: Consider moving some divs into seperate components -->
-<!-- TODO: Need to support mobile view -->
-<!-- TODO: Should use color pallete on this page the same as in the app -->
 <div class="app-mb-20">
   <div>
     <div class="app-center">
-      <img class="logo" src="assets/images/logo.svg">
+      <img class="logo app-w-200 app-h-80" src="assets/images/logo.svg">
     </div>
       <h1 class="app-center">OpenAPI Mobile Client</h1>
   </div>
   <div class="app-center">
-      <button mat-raised-button class="app-w-200 app-h-80"><h2>{{i18nKeys.download | i18n: pageName}}</h2></button>
+      <button class="app-w-200 app-h-80"><h2>{{i18nKeys.download | i18n: pageName}}</h2></button>
   </div>
   <div class="app-center">
-    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('en')"><h2>English</h2></button>
-    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('es')"><h2>Spain</h2></button>
-    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('uk')"><h2>Ukrainian</h2></button>
+    <button class="app-w-200 app-h-80"><h2>English</h2></button>
+    <button class="app-w-200 app-h-80"><h2>Spain</h2></button>
+    <button class="app-w-200 app-h-80"><h2>Ukrainian</h2></button>
   </div>
 </div>
 
-  <mat-card class="description">
-    <mat-card-header>
-      <mat-card-title>{{i18nKeys.descriptionTitle | i18n: pageName}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+  <div class="description">
+    <div>
+      <div>{{i18nKeys.descriptionTitle | i18n: pageName}}</div>
+    </div>
+    <div>
       <p>{{i18nKeys.description | i18n: pageName}}</p>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </div>
 <div>
     Video demonstrating how it works
 </div>
 <div>
     Images section
-
-    <!-- Probably need to remove this -->
-    <ul class="mdc-image-list my-image-list">
-        <li class="mdc-image-list__item">
-          <div class="mdc-image-list__image-aspect-container">
-            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/1.jpg">
-          </div>
-          <div class="mdc-image-list__supporting">
-            <span class="mdc-image-list__label">Text label</span>
-          </div>
-        </li>
-        <li class="mdc-image-list__item">
-          <div class="mdc-image-list__image-aspect-container">
-            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/2.jpg">
-          </div>
-          <div class="mdc-image-list__supporting">
-            <span class="mdc-image-list__label">Text label</span>
-          </div>
-        </li>
-        <li class="mdc-image-list__item">
-          <div class="mdc-image-list__image-aspect-container">
-            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/3.jpg">
-          </div>
-          <div class="mdc-image-list__supporting">
-            <span class="mdc-image-list__label">Text label</span>
-          </div>
-        </li>
-      </ul>
 </div>
 <div>
     Core features should be mentioned in some table or something
@@ -72,9 +41,3 @@
     Probably add some footer mmentioning copyrights and etc
     Could add some additional ways to connect to me
 </div>
-
-<mat-list>
-  <mat-list-item> Pepper </mat-list-item>
-  <mat-list-item> Salt </mat-list-item>
-  <mat-list-item> Paprika </mat-list-item>
- </mat-list>

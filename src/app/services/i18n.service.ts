@@ -42,6 +42,11 @@ export class I18nService {
     return phrase;
   } 
 
+  public getLocale(): string {
+    const data = this.getData();
+    return data["locale"];
+  }
+
   private getAndUpdateI18n(locale: string) : Promise<any> {
     return this.http.get(`/assets/i18n/${locale}.json`).toPromise()
       .then((data: any) => { 

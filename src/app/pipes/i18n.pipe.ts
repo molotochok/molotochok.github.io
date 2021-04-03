@@ -12,9 +12,4 @@ export class I18nPipe implements PipeTransform {
   public transform(phrase: any, pageName:any, args?: any): any {
     return this.i18nService.getTranslation(phrase, pageName);
   }
-
-  public async changeLanguage(locale: string) {
-    await this.i18nService.changeLanguage(locale);
-  }
-
 }

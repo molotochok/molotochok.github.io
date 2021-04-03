@@ -1,0 +1,23 @@
+<div class="menu">
+  <img class="logo" src="assets/images/logo.svg">
+  <div class="menu-items">
+    <ng-container *ngFor="let item of menu">
+      <button 
+        class="btn menu-item"
+        [routerLink]="item.pathname"
+        [ngClass]="isActivePage(item) ? 'menu-item-active' : ''">
+        {{item.title}}
+      </button>
+    </ng-container>
+  </div>
+  <div class="languages">
+    <ng-container *ngFor="let language of languages">
+      <img 
+        class="language"
+        [ngClass]="language.active ? 'language-active' : ''"
+        [src]="getLanguageFilePath(language)"
+        (click)="chooseLanguage(language)">
+    </ng-container>
+  </div>
+  <div class="footer">Markiian Karpa</div>
+</div>
