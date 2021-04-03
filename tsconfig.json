@@ -10,7 +10,9 @@
       "@assets/*": ["src/assets/*"],
       "@directives/*": ["src/app/directives/*"],
       "@router/*": ["src/app/router/*"],
-      "@models/*": ["src/app/models/*"]
+      "@models/*": ["src/app/models/*"],
+      "@services/*": ["src/app/services/*"],
+      "@pipes/*": ["src/app/pipes/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

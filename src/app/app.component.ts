@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { I18nPipe } from '@pipes/i18n.pipe';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv-app';
+
+  constructor(private translator: I18nPipe) {}
 }

@@ -1,25 +1,33 @@
 <!-- TODO: Consider moving some divs into seperate components -->
 <!-- TODO: Need to support mobile view -->
 <!-- TODO: Should use color pallete on this page the same as in the app -->
-
-<div>
-    Need to add fancy background
-</div>
-
-<mat-card>
-    <div>
-        <img src="assets/images/testImg.png">
-        <h1 class="app-center">OpenAPI Mobile Client</h1>
-    </div>
+<div class="app-mb-20">
+  <div>
     <div class="app-center">
-        <button  mat-raised-button>BUY THIS APP PLZ</button>
+      <img class="logo" src="assets/images/logo2.svg">
     </div>
-    
-</mat-card>
-<div>
-    Description
-    On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes
+      <h1 class="app-center">OpenAPI Mobile Client</h1>
+  </div>
+  <div class="app-center">
+      <button mat-raised-button class="app-w-200 app-h-80"><h2>{{i18nKeys.Download | i18n}}</h2></button>
+  </div>
+  <div class="app-center">
+    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('en')"><h2>English</h2></button>
+    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('es')"><h2>Spain</h2></button>
+    <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('uk')"><h2>Ukrainian</h2></button>
+  </div>
 </div>
+
+  <mat-card class="description">
+    <mat-card-header>
+      <mat-card-title>{{i18nKeys.Description | i18n}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        
+      </p>
+    </mat-card-content>
+  </mat-card>
 <div>
     Video demonstrating how it works
 </div>
@@ -30,7 +38,7 @@
     <ul class="mdc-image-list my-image-list">
         <li class="mdc-image-list__item">
           <div class="mdc-image-list__image-aspect-container">
-            <img class="mdc-image-list__image" src="assets/images/testImg.png">
+            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/1.jpg">
           </div>
           <div class="mdc-image-list__supporting">
             <span class="mdc-image-list__label">Text label</span>
@@ -38,7 +46,7 @@
         </li>
         <li class="mdc-image-list__item">
             <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/testImg.png">
+              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
             </div>
             <div class="mdc-image-list__supporting">
               <span class="mdc-image-list__label">Text label</span>
@@ -46,7 +54,7 @@
           </li>
           <li class="mdc-image-list__item">
             <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/testImg.png">
+              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
             </div>
             <div class="mdc-image-list__supporting">
               <span class="mdc-image-list__label">Text label</span>
@@ -54,7 +62,7 @@
           </li>
           <li class="mdc-image-list__item">
             <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/testImg.png">
+              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
             </div>
             <div class="mdc-image-list__supporting">
               <span class="mdc-image-list__label">Text label</span>
@@ -62,7 +70,7 @@
           </li>
           <li class="mdc-image-list__item">
             <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/testImg.png">
+              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
             </div>
             <div class="mdc-image-list__supporting">
               <span class="mdc-image-list__label">Text label</span>
@@ -70,7 +78,7 @@
           </li>
           <li class="mdc-image-list__item">
             <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/testImg.png">
+              <img class="mdc-image-list__image" src="assets/images/logo.svg">
             </div>
             <div class="mdc-image-list__supporting">
               <span class="mdc-image-list__label">Text label</span>
@@ -90,3 +98,9 @@
     Probably add some footer mmentioning copyrights and etc
     Could add some additional ways to connect to me
 </div>
+
+<mat-list>
+  <mat-list-item> Pepper </mat-list-item>
+  <mat-list-item> Salt </mat-list-item>
+  <mat-list-item> Paprika </mat-list-item>
+ </mat-list>

@@ -11,3 +11,20 @@
     justify-content: center;
     align-items: center; // TODO: Maybe I don't need this here
 }
+
+
+@for $i from 0 through 100 {
+    .app-mr-#{$i} { margin-right: #{$i}px !important; }
+    .app-ml-#{$i} { margin-left: #{$i}px !important; }
+    .app-mb-#{$i} { margin-bottom: #{$i}px !important; }
+    .app-mt-#{$i} { margin-top: #{$i}px !important; }
+    .app-pr-#{$i} { padding-right: #{$i}px !important; }
+    .app-pl-#{$i} { padding-left: #{$i}px !important; }
+    .app-pb-#{$i} { padding-bottom: #{$i}px !important; }
+    .app-pt-#{$i} { padding-top: #{$i}px !important; }
+}
+
+@for $i from 1 through 200 {
+    .app-h-#{$i} { height: #{$i}px !important; }
+    .app-w-#{$i} { width: #{$i}px !important; }
+}
