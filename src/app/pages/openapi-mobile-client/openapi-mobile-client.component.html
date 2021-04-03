@@ -4,12 +4,12 @@
 <div class="app-mb-20">
   <div>
     <div class="app-center">
-      <img class="logo" src="assets/images/logo2.svg">
+      <img class="logo" src="assets/images/logo.svg">
     </div>
       <h1 class="app-center">OpenAPI Mobile Client</h1>
   </div>
   <div class="app-center">
-      <button mat-raised-button class="app-w-200 app-h-80"><h2>{{i18nKeys.Download | i18n}}</h2></button>
+      <button mat-raised-button class="app-w-200 app-h-80"><h2>{{i18nKeys.download | i18n: pageName}}</h2></button>
   </div>
   <div class="app-center">
     <button mat-raised-button class="app-w-200 app-h-80" (click)="change_language('en')"><h2>English</h2></button>
@@ -20,12 +20,10 @@
 
   <mat-card class="description">
     <mat-card-header>
-      <mat-card-title>{{i18nKeys.Description | i18n}}</mat-card-title>
+      <mat-card-title>{{i18nKeys.descriptionTitle | i18n: pageName}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>
-        
-      </p>
+      <p>{{i18nKeys.description | i18n: pageName}}</p>
     </mat-card-content>
   </mat-card>
 <div>
@@ -45,45 +43,21 @@
           </div>
         </li>
         <li class="mdc-image-list__item">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
-          <li class="mdc-image-list__item">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
-          <li class="mdc-image-list__item">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
-          <li class="mdc-image-list__item">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/logo2.svg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
-          <li class="mdc-image-list__item">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="assets/images/logo.svg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
+          <div class="mdc-image-list__image-aspect-container">
+            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/2.jpg">
+          </div>
+          <div class="mdc-image-list__supporting">
+            <span class="mdc-image-list__label">Text label</span>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <div class="mdc-image-list__image-aspect-container">
+            <img class="mdc-image-list__image" src="assets/images/openapi-mobile-client/3.jpg">
+          </div>
+          <div class="mdc-image-list__supporting">
+            <span class="mdc-image-list__label">Text label</span>
+          </div>
+        </li>
       </ul>
 </div>
 <div>

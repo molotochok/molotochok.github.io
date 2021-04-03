@@ -1,3 +1,7 @@
 {
-  "download": "Descargar"
+  "openapi-mobile-client": {
+    "download": "Descargar",
+    "descriptionTitle": "Descripción",
+    "description": "Descripción information "
+  }
 }

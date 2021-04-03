@@ -9,8 +9,8 @@ export class I18nPipe implements PipeTransform {
 
   constructor(private i18nService: I18nService) {}
 
-  public transform(phrase: any, args?: any) {
-    return this.i18nService.getTranslation(phrase);
+  public transform(phrase: any, pageName:any, args?: any): any {
+    return this.i18nService.getTranslation(phrase, pageName);
   }
 
   public async changeLanguage(locale: string) {

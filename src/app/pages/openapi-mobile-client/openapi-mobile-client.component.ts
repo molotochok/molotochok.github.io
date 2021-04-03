@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpenapiMobileClientComponent implements OnInit {
 
-  public i18nKeys = I18nKeys;
+  public readonly pageName = 'openapi-mobile-client';
+  public i18nKeys = I18nKeys.OpenApiMobileClient;
 
   constructor(private translator: I18nPipe) {}
 

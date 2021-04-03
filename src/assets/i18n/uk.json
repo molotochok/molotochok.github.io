@@ -1,3 +1,7 @@
 {
-  "download": "Завантажити"
+  "openapi-mobile-client": {
+    "download": "Завантажити",
+    "descriptionTitle": "Опис",
+    "description": "Кекіч"
+  }
 }

@@ -1,3 +1,7 @@
 {
-  "download": "Download"
+  "openapi-mobile-client": {
+    "download": "Download",
+    "descriptionTitle": "Description",
+    "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
+  }
 }
