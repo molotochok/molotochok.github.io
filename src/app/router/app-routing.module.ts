@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OpenapiMobileClientComponent } from '@pages/openapi-mobile-client/openapi-mobile-client.component';
-import { HomeComponent } from '@pages/home/home.component';
+import { AboutMeComponent } from '@/app/pages/about-me/about-me.component';
 import { DragAndScoreComponent } from '@pages/drag-and-score/drag-and-score.component';
 
 export const ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: AboutMeComponent,
     data: {
-      title: "Home"
+      title: "About Me"
     }
   },
   {

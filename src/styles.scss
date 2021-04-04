@@ -1,5 +1,6 @@
 body {
     height: 100%;
+    background-color: rgb(96,96,96);
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -35,6 +36,5 @@ body {
 }
 
 router-outlet + * {
-    background-color: rgb(96,96,96);
     width: 100%;
 }  

@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from '@router/app-routing.module';
 import { AppComponent } from './app.component';
 import { OpenapiMobileClientComponent } from '@pages/openapi-mobile-client/openapi-mobile-client.component';
-import { HomeComponent } from '@pages/home/home.component';
+import { AboutMeComponent } from '@/app/pages/about-me/about-me.component';
 import { I18nService } from '@services/i18n.service';
 import { HttpClientModule } from '@angular/common/http';
 import { I18nPipe } from '@pipes/i18n.pipe';
@@ -14,15 +15,15 @@ import { DragAndScoreComponent } from './pages/drag-and-score/drag-and-score.com
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    AboutMeComponent,
     OpenapiMobileClientComponent,
     I18nPipe,
-    HomeComponent,
     MenuComponent,
     DragAndScoreComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule
   ],

@@ -1,4 +1,11 @@
 // TODO: Refactor colors
+.menu-opener {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
 .menu {
   width: 150px;
   height: 100%;
@@ -6,8 +13,21 @@
   text-align: center;
   background-color: rgb(64, 64, 64);
 
-  .logo {
+  &-header {
+    position: relative;
     height: 15%;
+
+    .menu-close {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      right: 0px;
+      top: 0px;
+      cursor: pointer;
+    }
+    .menu-logo {
+      height: 100%;
+    }
   }
 
   .menu-items {
@@ -15,6 +35,8 @@
     padding: 14px 0px 7px 0px;
 
     .menu-item {
+      padding: 5px;
+      display: flex;
       width: 100%;
       height: 50px;
       white-space: normal;
@@ -22,6 +44,16 @@
       margin-bottom: 5px;
       background-color: rgb(150,150,150);
       border-radius: 0px;
+
+      &-img {
+        width: 35px;
+        height: 35px
+      }
+
+      &-title {
+        margin: auto;
+        width: 100%;
+      }
     }
     .menu-item-active {
       background-color: rgb(96,96,96);
