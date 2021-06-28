@@ -1,40 +1,43 @@
 body {
-    height: 100%;
-    background-color: rgb(96,96,96);
+  height: 100%;
+  margin: 0px;
+  background-color: var(--app-main);
 }
 
 /* You can add global styles to this file, and also import other style files */
 * {
-    box-sizing: border-box;
-    font-family: "Heebo", sans-serif;
-    font-weight: 400;
-    color:white;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  color: var(--app-text);
 }
 
-// TODO: This could not be very correct as I can use only parent div
 .app-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; // TODO: Maybe I don't need this here
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.app-btn {
+  background-color: var(--app-btn);
+}
 
 @for $i from 0 through 100 {
-    .app-mr-#{$i} { margin-right: #{$i}px !important; }
-    .app-ml-#{$i} { margin-left: #{$i}px !important; }
-    .app-mb-#{$i} { margin-bottom: #{$i}px !important; }
-    .app-mt-#{$i} { margin-top: #{$i}px !important; }
-    .app-pr-#{$i} { padding-right: #{$i}px !important; }
-    .app-pl-#{$i} { padding-left: #{$i}px !important; }
-    .app-pb-#{$i} { padding-bottom: #{$i}px !important; }
-    .app-pt-#{$i} { padding-top: #{$i}px !important; }
+  .app-mr-#{$i} { margin-right: #{$i}px !important; }
+  .app-ml-#{$i} { margin-left: #{$i}px !important; }
+  .app-mb-#{$i} { margin-bottom: #{$i}px !important; }
+  .app-mt-#{$i} { margin-top: #{$i}px !important; }
+  .app-pr-#{$i} { padding-right: #{$i}px !important; }
+  .app-pl-#{$i} { padding-left: #{$i}px !important; }
+  .app-pb-#{$i} { padding-bottom: #{$i}px !important; }
+  .app-pt-#{$i} { padding-top: #{$i}px !important; }
 }
 
 @for $i from 1 through 200 {
-    .app-h-#{$i} { height: #{$i}px !important; }
-    .app-w-#{$i} { width: #{$i}px !important; }
+  .app-h-#{$i} { height: #{$i}px !important; }
+  .app-w-#{$i} { width: #{$i}px !important; }
 }
 
 router-outlet + * {
-    width: 100%;
+  width: 100%;
 }  

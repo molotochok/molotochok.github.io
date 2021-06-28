@@ -1,23 +1,25 @@
-<img *ngIf="!isMenuVisible" 
-  src="assets/images/menu/menu.svg"
-  class="menu-opener"
-  (click)="toggleMenuVisibility()">
-
-<div class="menu" *ngIf="isMenuVisible" @showHideTrigger>
+<div class="menu" *ngIf="isMenuVisible">
   <div class="menu-header">
-    <img class="menu-close" 
-      src="assets/images/menu/close.svg"
-      (click)="toggleMenuVisibility()">
-    <img class="menu-logo" src="assets/images/openapi-mobile-client/logo.png">
+    <img class="menu-logo" src="assets/images/menu/avatar.jpg">
   </div>
   <div class="menu-items">
     <ng-container *ngFor="let item of menu">
-      <div 
-        class="btn menu-item" [routerLink]="item.pathname"
-        [ngClass]="isActivePage(item) ? 'menu-item-active' : ''">
-        <img class="menu-item-img" [src]="getMenuItemLogoSrc(item)">
-        <span class="menu-item-title">{{item.title}}</span>
-      </div>
+        <div 
+            class="menu-item" [routerLink]="item.pathname"
+            [ngClass]="isActivePage(item) ? 'menu-item-active' : ''">
+            <img class="menu-item-img" [src]="getMenuItemLogoSrc(item)">
+            <span class="menu-item-title">{{item.title}}</span>
+        </div>
+    </ng-container>
+  </div>
+  <div class="themes">
+    <ng-container *ngFor="let theme of themes">
+      <img 
+        [src]="theme.src" 
+        class="theme"
+        [ngClass]="theme.active ? 'theme-active' : ''"
+        (click)="changeTheme(theme.type)"
+      >
     </ng-container>
   </div>
   <div class="languages">

@@ -3,28 +3,14 @@ import { MenuItem } from '@models/menu-item.model';
 import { ROUTES } from '@router/app-routing.module';
 import { I18nService } from '@services/i18n.service';
 import { Component, OnInit  } from '@angular/core';
-import {
-  trigger,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import { ThemeService } from '@services/theme/theme.service';
+import { ThemeTypes } from '@/app/services/theme/theme';
+import { Theme } from '@/app/models/theme.model';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
-  animations: [
-    trigger("showHideTrigger", [
-      transition('void => *', [
-        style({ "transform": 'translateX(-100%)', "margin-right":"-150px" }),
-        animate(350)
-      ]),
-      transition('* => void', [
-        animate(350, style({ transform: 'translateX(-100%)', "margin-right":"-150px"}))
-      ])
-    ])
-  ]
 })
 export class MenuComponent implements OnInit {
   isMenuVisible = true;
@@ -36,7 +22,23 @@ export class MenuComponent implements OnInit {
     new Language("uk", "ukrainian.png", false),
   ];
 
-  constructor(private i18nService: I18nService) { }
+  public themes: Theme[] = [
+    {
+      src: "assets/images/menu/light.svg",
+      type: ThemeTypes.light,
+      active: false
+    },
+    {
+      src: "assets/images/menu/dark.svg",
+      type: ThemeTypes.dark,
+      active: false
+    },
+  ];
+
+  constructor(
+    private i18nService: I18nService,
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit(): void {
     this.menu = ROUTES.map<MenuItem>(r => 
@@ -44,12 +46,20 @@ export class MenuComponent implements OnInit {
     );
 
     this.initActiveLanguage();
+    this.initActiveTheme();
   }
 
+  /* Navigation */
   isActivePage(item: MenuItem): boolean {
     return ("/" + item.pathname) === window.location.pathname;
   }
 
+  getMenuItemLogoSrc(item: MenuItem): string {
+    const pathname = item.pathname ? item.pathname : "about-me";
+    return `assets/images/${pathname}/logo.png`;
+  }
+
+  /* Lannguage */
   initActiveLanguage(): void {
     const locale = this.i18nService.getLocale();
     const language = this.languages.find(l => l.locale === locale);
@@ -57,11 +67,6 @@ export class MenuComponent implements OnInit {
     if(language) {
       language.active = true;
     }
-  }
-
-  getMenuItemLogoSrc(item: MenuItem): string {
-    const pathname = item.pathname ? item.pathname : "about-me";
-    return `assets/images/${pathname}/logo.png`;
   }
 
   getLanguageFilePath(language: Language) {
@@ -75,7 +80,15 @@ export class MenuComponent implements OnInit {
     this.i18nService.changeLanguage(language.locale);
   }
 
-  toggleMenuVisibility(): void {
-    this.isMenuVisible = !this.isMenuVisible;
+  /* Theme */
+  initActiveTheme() {
+    const currentTheme = this.themeService.getCurrentTheme();
+    const theme = this.themes.find(t => t.type == currentTheme);
+    theme.active = true;
+  }
+
+  changeTheme(type: ThemeTypes) {
+    this.themes.forEach(t => t.active = (t.type == type));
+    this.themeService.changeTheme(type);
   }
 }

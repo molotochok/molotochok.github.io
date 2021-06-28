@@ -9,8 +9,9 @@ import { AboutMeComponent } from '@/app/pages/about-me/about-me.component';
 import { I18nService } from '@services/i18n.service';
 import { HttpClientModule } from '@angular/common/http';
 import { I18nPipe } from '@pipes/i18n.pipe';
-import { MenuComponent } from './components/menu/menu.component';
-import { DragAndScoreComponent } from './pages/drag-and-score/drag-and-score.component';
+import { MenuComponent } from '@components/menu/menu.component';
+import { DragAndScoreComponent } from '@pages/drag-and-score/drag-and-score.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { DragAndScoreComponent } from './pages/drag-and-score/drag-and-score.com
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    // TODO: Probably need to move all material components into seperate module
+    MatButtonModule
   ],
   providers: [I18nService,I18nPipe],
   bootstrap: [AppComponent]

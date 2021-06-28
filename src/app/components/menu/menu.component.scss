@@ -1,21 +1,15 @@
-// TODO: Refactor colors
-.menu-opener {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-}
-
 .menu {
-  width: 150px;
+  width: 220px;
   height: 100%;
   display: block;
   text-align: center;
-  background-color: rgb(64, 64, 64);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--app-menu);
 
   &-header {
     position: relative;
-    height: 15%;
+    height: 27%;
 
     .menu-close {
       position: absolute;
@@ -27,11 +21,12 @@
     }
     .menu-logo {
       height: 100%;
+      border-radius: 50%;
     }
   }
 
   .menu-items {
-    height: 74%;
+    height: 59%;
     padding: 14px 0px 7px 0px;
 
     .menu-item {
@@ -42,8 +37,9 @@
       white-space: normal;
       line-height: 1;
       margin-bottom: 5px;
-      background-color: rgb(150,150,150);
+      background-color: var(--app-menu-item);
       border-radius: 0px;
+      cursor: pointer;
 
       &-img {
         width: 35px;
@@ -56,7 +52,7 @@
       }
     }
     .menu-item-active {
-      background-color: rgb(96,96,96);
+      background-color: var(--app-menu-item-active);
     }
     .btn:focus {
       box-shadow: none;
@@ -64,25 +60,46 @@
   }
 
   .languages {
-    height: 5%;
+    height: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 8px;
 
     .language {
-      height: 18px;
-      width: 36px;
+      width: 48px;
       margin-left: 5px;
       margin-right: 5px;
       cursor: pointer;
-      opacity:35%;
+      filter: brightness(35%);
     }
 
     .language-active {
-      opacity: 100%;
+      filter: brightness(100%);
+    }
+  }
+
+  .themes {
+    height: 6%;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
+
+    .theme {
+      height: 100%; 
+      display: block;
+      filter: brightness(35%);
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .theme-active {
+      filter: brightness(100%);
     }
   }
 
   .footer {
-    padding-top: 7px;
-    height: 6%;
-    background-color: rgb(25,25,25);
+    border-top: 1px solid var(--app-main);
+    padding-top: 10px;
+    height: 4%;
   }
 }
