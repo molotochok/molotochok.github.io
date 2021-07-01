@@ -6,10 +6,11 @@
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: var(--app-menu);
+  position: relative;
 
   &-header {
     position: relative;
-    height: 27%;
+    height: 200px;
 
     .menu-close {
       position: absolute;
@@ -26,7 +27,6 @@
   }
 
   .menu-items {
-    height: 59%;
     padding: 14px 0px 7px 0px;
 
     .menu-item {
@@ -50,7 +50,12 @@
         margin: auto;
         width: 100%;
       }
+
+      &:hover:not(.menu-item-active) {
+        filter: brightness(78%);
+      }
     }
+
     .menu-item-active {
       background-color: var(--app-menu-item-active);
     }
@@ -59,47 +64,61 @@
     }
   }
 
-  .languages {
-    height: 4%;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 8px;
+  .footer-parent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
-    .language {
-      width: 48px;
-      margin-left: 5px;
-      margin-right: 5px;
-      cursor: pointer;
-      filter: brightness(35%);
+    .languages {
+      height: 26px;
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 8px;
+  
+      .language {
+        width: 46px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        filter: brightness(35%);
+
+        &:hover:not(.language-active) {
+          filter: brightness(78%);
+        }
+      }
+  
+      .language-active {
+        filter: brightness(100%);
+      }
     }
+  
+    .themes {
+      height: 50px;
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: center;
+  
+      .theme {
+        height: 100%; 
+        display: block;
+        opacity: 30%;
+        cursor: pointer;
+        margin-right: 5px;
 
-    .language-active {
-      filter: brightness(100%);
+        &:hover:not(.theme-active) {
+          opacity: 70%;
+        }
+      }
+  
+      .theme-active {
+        opacity: 100%;
+      }
     }
-  }
-
-  .themes {
-    height: 6%;
-    padding-bottom: 8px;
-    display: flex;
-    justify-content: center;
-
-    .theme {
-      height: 100%; 
-      display: block;
-      filter: brightness(35%);
-      cursor: pointer;
-      margin-right: 5px;
+  
+    .footer {
+      border-top: 1px solid var(--app-main);
+      padding-top: 10px;
+      padding-bottom: 5px;
     }
-
-    .theme-active {
-      filter: brightness(100%);
-    }
-  }
-
-  .footer {
-    border-top: 1px solid var(--app-main);
-    padding-top: 10px;
-    height: 4%;
   }
 }

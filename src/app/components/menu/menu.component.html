@@ -12,24 +12,26 @@
         </div>
     </ng-container>
   </div>
-  <div class="themes">
-    <ng-container *ngFor="let theme of themes">
-      <img 
-        [src]="theme.src" 
-        class="theme"
-        [ngClass]="theme.active ? 'theme-active' : ''"
-        (click)="changeTheme(theme.type)"
-      >
-    </ng-container>
+  <div class="footer-parent">
+    <div class="themes">
+      <ng-container *ngFor="let theme of themes">
+        <img 
+          [src]="theme.src" 
+          class="theme"
+          [ngClass]="theme.active ? 'theme-active' : ''"
+          (click)="changeTheme(theme.type)"
+        >
+      </ng-container>
+    </div>
+    <div class="languages">
+      <ng-container *ngFor="let language of languages">
+        <img 
+          class="language"
+          [ngClass]="language.active ? 'language-active' : ''"
+          src="assets/images/languages/{{language.fileName}}"
+          (click)="changeLanguage(language)">
+      </ng-container>
+    </div>
+    <div class="footer">Markiian Karpa</div>
   </div>
-  <div class="languages">
-    <ng-container *ngFor="let language of languages">
-      <img 
-        class="language"
-        [ngClass]="language.active ? 'language-active' : ''"
-        [src]="getLanguageFilePath(language)"
-        (click)="chooseLanguage(language)">
-    </ng-container>
-  </div>
-  <div class="footer">Markiian Karpa</div>
 </div>

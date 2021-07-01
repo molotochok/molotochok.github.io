@@ -6,8 +6,7 @@ import { THEMES, ThemeTypes } from './theme';
   providedIn: 'root'
 })
 export class ThemeService {
-  
-  private localStorageKey: string = "theme";
+  private localStorageKey = 'theme';
 
   getCurrentTheme(): ThemeTypes {
     return ThemeTypes[localStorage.getItem(this.localStorageKey)];
@@ -16,7 +15,7 @@ export class ThemeService {
   initTheme() {
     let theme = this.getCurrentTheme();
 
-    if(!theme) {
+    if (!theme) {
       theme = ThemeTypes.light;
     }
 

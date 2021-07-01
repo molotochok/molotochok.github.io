@@ -1,4 +1,4 @@
-import { ThemeTypes } from "@services/theme/theme";
+import { ThemeTypes } from '@services/theme/theme';
 
 export class Theme {
   public constructor(

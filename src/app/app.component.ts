@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { I18nPipe } from '@pipes/i18n.pipe';
 import { ThemeService } from '@services/theme/theme.service';
 
 @Component({
@@ -10,10 +9,7 @@ import { ThemeService } from '@services/theme/theme.service';
 export class AppComponent implements OnInit {
   title = 'cv-app';
 
-  constructor(
-    private translator: I18nPipe,
-    private themeService: ThemeService) 
-  {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
     this.themeService.initTheme();

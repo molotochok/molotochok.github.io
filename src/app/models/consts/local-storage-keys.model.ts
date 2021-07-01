@@ -1,3 +1,3 @@
 export class LocalStorageKeys {
-  public static readonly I18n = "i18n";
+  public static readonly I18N = 'i18n';
 }

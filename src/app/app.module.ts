@@ -27,10 +27,9 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    // TODO: Probably need to move all material components into seperate module
     MatButtonModule
   ],
-  providers: [I18nService,I18nPipe],
+  providers: [I18nService, I18nPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
