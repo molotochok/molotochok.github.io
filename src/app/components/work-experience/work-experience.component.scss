@@ -1,0 +1,33 @@
+.work-experience {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid var(--app-text);
+  margin-bottom: 10px;
+
+  .work-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .work-content {
+    flex:auto;
+    margin-left: 10px;
+    
+    .work-date {
+      float: right;
+    }
+
+    .work-position {
+      font-weight: bold;
+      font-size: large;
+    }
+  
+    .company {
+      filter: brightness(78%);
+    }
+
+    .work-description {
+      white-space: pre-line;
+    }
+  }
+}

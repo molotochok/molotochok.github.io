@@ -1,0 +1,14 @@
+<div class="work-experience">
+  <div class="work-img">
+    <img [src]="workExperience.companyLogo">
+  </div>
+  <div class="work-content">
+    <div>
+      <div class="work-date">{{displayDate()}}</div>
+      <div class="work-position">{{workExperienceKeys.position | i18n: i18nPath}}</div>
+    </div>
+    <div class="company">{{workExperience.company}}, {{workExperienceKeys.location | i18n: i18nPath}}</div>
+    <br>
+    <div class="work-description">{{workExperienceKeys.description | i18n: i18nPath}}</div>
+  </div>
+</div>

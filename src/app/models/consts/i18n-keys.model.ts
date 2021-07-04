@@ -4,4 +4,12 @@ export class I18nKeys {
     descriptionTitle: 'descriptionTitle',
     description: 'description',
   };
+
+  public static readonly AboutMe = {
+    workExperience: {
+      description: 'description',
+      position: 'position',
+      location: 'location'
+    }
+  };
 }

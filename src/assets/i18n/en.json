@@ -4,5 +4,31 @@
     "download": "Download",
     "descriptionTitle": "Description",
     "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
+  },
+  "about-me": {
+    "year": "y",
+    "month": "m",
+    "work-experiences": {
+      "data-art": {
+        "description": "Working with the project which is written using Ruby on Rails framework. Integrating this project to the main system which is based on .NET technologies.\nUsing the following technologies: Ruby on Rails, Sidekiq, RSpec, React, ASP.NET Core, PostgreSQL, T-SQL, MongoDB.\nOn this project I communicate with clients a lot (even more than on my previous project) since they are a part of our dev team.",
+        "location": "Kyiv/Remote",
+        "position": "Full Stack Software Developer"
+      },
+      "redwerk": {
+        "description": "Participating in creating a new WEB application based on microservices. For creating a back-end logic using a ASP.NET Core. For creating a front-end logic - Angular 8. Working with Cosmos DB and Docker. Participating in meetings with clients to fully understand requirements.",
+        "location": "Kyiv/Remote",
+        "position": "Full Stack Software Developer"
+      },
+      "pnn-soft": {
+        "description": "Maintained existing monolith WEB application, created using framework ASP NET MVC. Writing code for back-end part using C# language as well as for front-end part using a JavaScript and JQuery library. Because I have a good knowledge of Unity I also participated in two different projects where we used this engine. The first one was a runner game. Here I developed a new level by writing a new functionality and placing 3d models in a scene as a game designer. In the second project I developed a simple Augmented Reality mobile application using Unity Foundation.",
+        "location": "Kyiv",
+        "position": "Full Stack Software Developer"
+      },
+      "freelance": {
+        "description": "Developed a simple chat bot using Xamarin framework.",
+        "location": "Kyiv",
+        "position": "Xamarin Developer"
+      }
+    }
   }
 }

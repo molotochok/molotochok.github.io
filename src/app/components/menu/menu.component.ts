@@ -6,7 +6,7 @@ import { Component, OnInit  } from '@angular/core';
 import { ThemeService } from '@services/theme/theme.service';
 import { ThemeTypes } from '@/app/services/theme/theme';
 import { Theme } from '@/app/models/theme.model';
-import { I18nLocales } from '@/app/models/consts/i18n-locales.model';
+import { languages, themes } from './config';
 
 @Component({
   selector: 'app-menu',
@@ -17,25 +17,8 @@ export class MenuComponent implements OnInit {
   isMenuVisible = true;
 
   public menu: MenuItem[];
-  public languages: Language[] = [
-    // TODO: locale magic string fix
-    new Language(I18nLocales.EN, 'english.png', false),
-    new Language(I18nLocales.ES, 'spanish.png', false),
-    new Language(I18nLocales.UK, 'ukrainian.png', false),
-  ];
-
-  public themes: Theme[] = [
-    {
-      src: 'assets/images/menu/light.svg',
-      type: ThemeTypes.light,
-      active: false
-    },
-    {
-      src: 'assets/images/menu/dark.svg',
-      type: ThemeTypes.dark,
-      active: false
-    },
-  ];
+  public languages: Language[] = languages;
+  public themes: Theme[] = themes;
 
   constructor(
     private i18nService: I18nService,

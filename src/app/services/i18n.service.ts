@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LocalStorageKeys } from '@models/consts/local-storage-keys.model';
-import { I18nLocales } from '../models/consts/i18n-locales.model';
+import { I18nLocales } from '@models/consts/i18n-locales.model';
 
 @Injectable()
 export class I18nService {
@@ -19,32 +19,20 @@ export class I18nService {
     );
   }
 
-  /** i18n file can look like this:
-   * {
-   *  "page_1": {
-   *    "key_1": "value_1"
-   *  },
-   * "page_2": {
-   *    "key_2": "value_2"
-   *  },
-   * }
-   */
-  public getTranslation(phrase: string, pageName: string) {
-    const data = this.getData();
+  // path should look like this: about-me/data-art/description
+  public getTranslation(path: string) {
+    let data = this.getData();
 
-    if (!data) {
-      return phrase;
+    const keys = path.split('/');
+    for (const key of keys) {
+      if (!data) {
+        return '';
+      }
+
+      data = data[key];
     }
 
-    if (pageName && data[pageName][phrase]) {
-      return data[pageName][phrase];
-    }
-
-    if (data[phrase]) {
-      return data[phrase];
-    }
-
-    return phrase;
+    return data ?? '';
   }
 
   public async getLocale(): Promise<string> {

@@ -1,0 +1,19 @@
+.about-me {
+  padding: 15px;
+
+  .work-experiences {
+    border: 2px solid var(--app-text);
+    padding: 0 10px;
+    border-radius: 30px;
+
+    &-duration {
+      float: right;
+      margin-right: 12px;
+    }
+
+    &-title {
+      font-weight: bold;
+      margin: 15px;
+    }
+  }
+}

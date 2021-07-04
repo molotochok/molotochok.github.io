@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="about-me">
+  <div class="work-experiences">
+    <div>
+      <div class="work-experiences-duration">{{workExperiencesDuration()}}</div>
+      <h2 class="work-experiences-title">Work Experience</h2>
+    </div>
+    <div *ngFor="let workExperience of workExperiences">
+      <app-work-experience [pageName]="pageName" [workExperience]="workExperience">
+      </app-work-experience>
+    </div>
+  </div>
+</div>

@@ -4,5 +4,9 @@
     "download": "Descargar",
     "descriptionTitle": "Descripción",
     "description": "Descripción information "
+  },
+  "about-me": {
+    "year": "a",
+    "month": "m"
   }
 }
