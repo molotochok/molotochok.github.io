@@ -1,7 +1,6 @@
-import { WorkExperience } from '@models/work-experience.model';
-import { WorkDurationService } from '@services/work-duration.service';
 import { Component, OnInit } from '@angular/core';
-import { workExperiences } from './configs';
+import { educations, workExperiences } from './configs';
+import { ListTile} from '@/app/models/list-tile.model';
 
 @Component({
   selector: 'app-about-me',
@@ -10,19 +9,19 @@ import { workExperiences } from './configs';
 })
 export class AboutMeComponent implements OnInit {
   pageName = 'about-me';
-  workExperiences: WorkExperience[] = workExperiences;
 
-  constructor(private workDurationService: WorkDurationService) { }
+  workExperiences: ListTile[] = workExperiences;
+  educations: ListTile[] = educations;
 
-  ngOnInit(): void {
+  get workExperiencePageName() {
+    return this.pageName + '/work-experiences';
   }
 
-  workExperiencesDuration() {
-    const duration = this.workExperiences.reduce<number>((prev, curr, _, __) => {
-      return this.workDurationService.monthDuration(curr.startDate, curr.endDate) + prev;
-    }, 0);
-
-    return this.workDurationService.displayDuration(duration, this.pageName);
+  get educationPageName() {
+    return this.pageName + '/education';
   }
 
+  constructor() { }
+
+  ngOnInit(): void { }
 }

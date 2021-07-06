@@ -1,33 +1,45 @@
 {
   "locale": "en",
+  "year": "y",
+  "month": "m",
   "openapi-mobile-client": {
     "download": "Download",
     "descriptionTitle": "Description",
     "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
   },
   "about-me": {
-    "year": "y",
-    "month": "m",
     "work-experiences": {
       "data-art": {
         "description": "Working with the project which is written using Ruby on Rails framework. Integrating this project to the main system which is based on .NET technologies.\nUsing the following technologies: Ruby on Rails, Sidekiq, RSpec, React, ASP.NET Core, PostgreSQL, T-SQL, MongoDB.\nOn this project I communicate with clients a lot (even more than on my previous project) since they are a part of our dev team.",
         "location": "Kyiv/Remote",
+        "company": "DataArt",
         "position": "Full Stack Software Developer"
       },
       "redwerk": {
         "description": "Participating in creating a new WEB application based on microservices. For creating a back-end logic using a ASP.NET Core. For creating a front-end logic - Angular 8. Working with Cosmos DB and Docker. Participating in meetings with clients to fully understand requirements.",
         "location": "Kyiv/Remote",
+        "company": "Redwerk",
         "position": "Full Stack Software Developer"
       },
       "pnn-soft": {
         "description": "Maintained existing monolith WEB application, created using framework ASP NET MVC. Writing code for back-end part using C# language as well as for front-end part using a JavaScript and JQuery library. Because I have a good knowledge of Unity I also participated in two different projects where we used this engine. The first one was a runner game. Here I developed a new level by writing a new functionality and placing 3d models in a scene as a game designer. In the second project I developed a simple Augmented Reality mobile application using Unity Foundation.",
         "location": "Kyiv",
+        "company": "PNN-Soft",
         "position": "Full Stack Software Developer"
       },
       "freelance": {
         "description": "Developed a simple chat bot using Xamarin framework.",
         "location": "Kyiv",
+        "company": "Freelance",
         "position": "Xamarin Developer"
+      }
+    },
+    "education": {
+      "kpi": {
+        "university": "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\"",
+        "specialization": "Software Engineering",
+        "degree": "Master",
+        "description": "As a result of my studying in a university I have created a mobile application using cross-platform framework Flutter. This application is similar to a Swagger but for mobile platforms. It simplify the process of creating and sending HTTP API requests from clients to the servers."
       }
     }
   }

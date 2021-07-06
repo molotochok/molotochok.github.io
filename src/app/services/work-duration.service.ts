@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { WorkExperience } from '@models/work-experience.model';
 import { I18nService } from './i18n.service';
 import { formatDate } from '@angular/common';
 
 @Injectable()
-export class WorkDurationService {
+export class DateDurationService {
 
   constructor(private i18nService: I18nService) {}
 
-  displayDate(workExperience: WorkExperience, pageName: string): string {
+  displayDate(startDate: Date, endDate: Date, showDuration = true): string {
     const format = 'MM/yyyy';
     const locale = 'en';
-
-    const startDate = workExperience.startDate;
-    const endDate = workExperience.endDate;
 
     const start = formatDate(startDate, format, locale);
     const end = endDate
@@ -21,10 +17,13 @@ export class WorkDurationService {
       : 'present';
 
     const months = this.monthDuration(startDate, endDate);
-    return `${start} - ${end} (${this.displayDuration(months, pageName)})`;
+    const duration = showDuration
+      ? ` (${this.displayDuration(months)})`
+      : '';
+    return `${start} - ${end}${duration}`;
   }
 
-  displayDuration(months: number, pageName: string): string {
+  displayDuration(months: number): string {
     function getValueForDisplay(duration: number, label: string) {
       return duration > 0 ? duration + ' ' + label : '';
     }
@@ -35,18 +34,18 @@ export class WorkDurationService {
       months %= 12;
     }
 
-    const yearDisplay = getValueForDisplay(years, this.i18nService.getTranslation(pageName + '/year'));
-    const monthDisplay = getValueForDisplay(months, this.i18nService.getTranslation(pageName + '/month'));
+    const yearDisplay = getValueForDisplay(years, this.i18nService.getTranslation('year'));
+    const monthDisplay = getValueForDisplay(months, this.i18nService.getTranslation('month'));
 
     return (yearDisplay ? yearDisplay + ' ' : '') + monthDisplay;
   }
 
-  monthDuration(dateFrom: Date, dateTo: Date): number {
-    dateFrom = dateFrom ?? new Date();
-    dateTo = dateTo ?? new Date();
+  monthDuration(startDate: Date, endDate: Date): number {
+    startDate = startDate ?? new Date();
+    endDate = endDate ?? new Date();
 
-    const monthDiff = dateTo.getMonth() - dateFrom.getMonth();
-    const yearDiff = dateTo.getFullYear() - dateFrom.getFullYear();
+    const monthDiff = endDate.getMonth() - startDate.getMonth();
+    const yearDiff = endDate.getFullYear() - startDate.getFullYear();
     return monthDiff + (12 * (yearDiff)) + 1;
   }
 }

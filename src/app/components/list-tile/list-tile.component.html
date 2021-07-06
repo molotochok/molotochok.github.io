@@ -1,0 +1,14 @@
+<div class="list-tile">
+  <div class="lt-logo">
+    <img [src]="listTile.logo">
+  </div>
+  <div class="lt-content">
+    <div>
+      <div class="lt-date">{{displayDate()}}</div>
+      <div class="lt-title">{{getValue(listTile.title)}}</div>
+    </div>
+    <div class="lt-subtitle">{{getSubtitle()}}</div>
+    <br>
+    <div class="lt-description">{{getValue(listTile.description)}}</div>
+  </div>
+</div>

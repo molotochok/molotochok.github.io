@@ -1,32 +1,36 @@
-.work-experience {
+.list-tile {
   display: flex;
   padding: 12px;
   border-top: 1px solid var(--app-text);
   margin-bottom: 10px;
 
-  .work-img {
-    width: 100px;
-    height: 100px;
+  .lt-logo {
+    width: 90px;
+    height: 90px;
+
+    img {
+      width: inherit;
+    }
   }
 
-  .work-content {
+  .lt-content {
     flex:auto;
     margin-left: 10px;
     
-    .work-date {
+    .lt-date {
       float: right;
     }
 
-    .work-position {
+    .lt-title {
       font-weight: bold;
       font-size: large;
     }
   
-    .company {
+    .lt-subtitle {
       filter: brightness(78%);
     }
 
-    .work-description {
+    .lt-description {
       white-space: pre-line;
     }
   }

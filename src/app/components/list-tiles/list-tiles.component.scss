@@ -1,0 +1,14 @@
+.list-tiles {
+  border: 1px solid var(--app-text);
+  padding: 0 10px;
+
+  &-duration {
+    float: right;
+    margin-right: 12px;
+  }
+
+  &-title {
+    font-weight: bold;
+    margin: 15px;
+  }
+}

@@ -12,9 +12,10 @@ import { I18nPipe } from '@pipes/i18n.pipe';
 import { MenuComponent } from '@components/menu/menu.component';
 import { DragAndScoreComponent } from '@pages/drag-and-score/drag-and-score.component';
 import {MatButtonModule} from '@angular/material/button';
-import { WorkExperienceComponent } from '@components/work-experience/work-experience.component';
-import { WorkDurationService } from '@services/work-duration.service';
+import { ListTileComponent } from '@/app/components/list-tile/list-tile.component';
+import { DateDurationService } from '@/app/services/work-duration.service';
 import { ThemeService } from '@services/theme/theme.service';
+import { ListTilesComponent } from './components/list-tiles/list-tiles.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ThemeService } from '@services/theme/theme.service';
     I18nPipe,
     MenuComponent,
     DragAndScoreComponent,
-    WorkExperienceComponent,
+    ListTileComponent,
+    ListTilesComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { ThemeService } from '@services/theme/theme.service';
     HttpClientModule,
     MatButtonModule
   ],
-  providers: [I18nService, ThemeService, WorkDurationService, I18nPipe],
+  providers: [I18nService, ThemeService, DateDurationService, I18nPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
