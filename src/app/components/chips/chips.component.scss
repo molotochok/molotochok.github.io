@@ -1,0 +1,25 @@
+.chips {
+  &-content {
+    width: 100%;
+  }
+
+  &-group {
+    text-align: center;
+    display: flex;
+    
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    span {
+      line-height: 2;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &-list {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+}

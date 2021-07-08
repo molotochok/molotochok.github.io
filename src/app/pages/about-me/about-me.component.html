@@ -1,18 +1,18 @@
 <div class="about-me">
   <div>Overview</div>
-  <div>Skills</div>
-
+  <app-chips 
+    [i18nSourcePath]="skillsPageName"
+    [title]="'title' | i18n: skillsPageName" 
+    [groups]="skills"
+  ></app-chips>
   <app-list-tiles
-    [title]="'Work Experience'"
-    [i18nSourcePath]="workExperiencePageName"
+    [title]="'title' | i18n: workExperiencesPageName"
+    [i18nSourcePath]="workExperiencesPageName"
     [listTiles]="workExperiences"
   ></app-list-tiles>
-  
-  <div class="delimiter"></div>
-
   <app-list-tiles
-    [title]="'Education'"
-    [i18nSourcePath]="educationPageName"
+    [title]="'title' | i18n: educationsPageName"
+    [i18nSourcePath]="educationsPageName"
     [listTiles]="educations"
     [showAllDuration]="false"
     [showTileDuration]="false"

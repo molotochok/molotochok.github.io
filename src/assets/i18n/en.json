@@ -8,7 +8,15 @@
     "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
   },
   "about-me": {
+    "skills": {
+      "title": "Skills",
+      "languages": "Languages",
+      "databases": "Databases",
+      "frameworks": "Frameworks",
+      "libraries": "Libraries"
+    },
     "work-experiences": {
+      "title": "Work Experience",
       "data-art": {
         "description": "Working with the project which is written using Ruby on Rails framework. Integrating this project to the main system which is based on .NET technologies.\nUsing the following technologies: Ruby on Rails, Sidekiq, RSpec, React, ASP.NET Core, PostgreSQL, T-SQL, MongoDB.\nOn this project I communicate with clients a lot (even more than on my previous project) since they are a part of our dev team.",
         "location": "Kyiv/Remote",
@@ -34,7 +42,8 @@
         "position": "Xamarin Developer"
       }
     },
-    "education": {
+    "educations": {
+      "title": "Education",
       "kpi": {
         "university": "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\"",
         "specialization": "Software Engineering",

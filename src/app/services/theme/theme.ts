@@ -11,6 +11,7 @@ export interface Theme {
   '--app-menu-item': string;
   '--app-menu-item-active': string;
   '--app-btn': string;
+  '--app-chip': string;
 }
 
 export class LightTheme implements Theme {
@@ -20,6 +21,7 @@ export class LightTheme implements Theme {
   '--app-menu-item' = '#64c1ff';
   '--app-menu-item-active' = '#eeeeee';
   '--app-btn' = '#ff5252';
+  '--app-chip' = '#ffb04c';
 }
 
 export class DarkTheme implements Theme {
@@ -29,6 +31,7 @@ export class DarkTheme implements Theme {
   '--app-menu-item' = '#3e4042';
   '--app-menu-item-active' = '#303030';
   '--app-btn' = '#3f51b5';
+  '--app-chip' = '#bc5100';
 }
 
 export const THEMES = {

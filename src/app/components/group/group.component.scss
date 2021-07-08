@@ -1,0 +1,18 @@
+.group {
+  padding: 0 10px;
+
+  &-trail {
+    float: right;
+    margin-right: 12px;
+  }
+
+  &-title {
+    font-weight: bold;
+    margin: 15px;
+  }
+
+  &-content {
+    border-top: 1px solid var(--app-text);
+    padding: 12px;
+  }
+}

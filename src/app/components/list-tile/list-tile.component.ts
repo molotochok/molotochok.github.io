@@ -14,8 +14,6 @@ export class ListTileComponent implements OnInit {
   @Input() listTile: ListTile;
   @Input() i18nSourcePath: string;
 
-  workExperienceKeys = I18nKeys.AboutMe.workExperience;
-
   constructor(
     private dateDurationService: DateDurationService,
     private i18nService: I18nService

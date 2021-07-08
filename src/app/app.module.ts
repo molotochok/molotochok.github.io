@@ -16,6 +16,9 @@ import { ListTileComponent } from '@/app/components/list-tile/list-tile.componen
 import { DateDurationService } from '@/app/services/work-duration.service';
 import { ThemeService } from '@services/theme/theme.service';
 import { ListTilesComponent } from './components/list-tiles/list-tiles.component';
+import { ChipComponent } from './components/chip/chip.component';
+import { ChipsComponent } from './components/chips/chips.component';
+import { GroupComponent } from './components/group/group.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { ListTilesComponent } from './components/list-tiles/list-tiles.component
     DragAndScoreComponent,
     ListTileComponent,
     ListTilesComponent,
+    ChipComponent,
+    ChipsComponent,
+    GroupComponent,
   ],
   imports: [
     BrowserModule,

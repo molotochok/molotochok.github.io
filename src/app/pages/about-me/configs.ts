@@ -1,6 +1,43 @@
+import { ChipGroup } from '@models/chip-group.model';
 import { ListTile } from '@models/list-tile.model';
 
 const baseImgPath = 'assets/images/about-me/';
+
+export const skills: ChipGroup[] = [
+  {
+    group: 'languages',
+    texts: [
+      'C#',
+      'Dart',
+      'Python',
+      'JavaScript',
+      'TypeScript',
+      'Ruby'
+    ],
+  },
+  {
+    group: 'databases',
+    texts: ['T-SQL', 'PostreSQL', 'Azure Cosmos DB'],
+  },
+  {
+    group: 'frameworks',
+    texts: [
+      'ASP.NET MVC',
+      'ASP.NET Core',
+      'Ruby on Rails',
+      'Flutter',
+      'Unity',
+      'Angular 2+',
+      'React',
+      'Sidekiq',
+      'Xamarin'
+    ],
+  },
+  {
+    group: 'libraries',
+    texts: ['Jquery', 'ARCore'],
+  },
+];
 
 const workExperienceI18nKeys = {
   title: 'position',

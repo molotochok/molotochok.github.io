@@ -18,7 +18,11 @@ export class ListTilesComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  duration() {
+  allDuration() {
+    if (!this.showAllDuration) {
+      return null;
+    }
+
     const duration = this.listTiles.reduce<number>((prev, curr, _, __) => {
       return this.dateDurationService.monthDuration(curr.startDate, curr.endDate) + prev;
     }, 0);

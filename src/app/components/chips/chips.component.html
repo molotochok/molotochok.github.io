@@ -1,0 +1,12 @@
+<div class="chips">
+  <app-group [title]="title">
+    <ng-template>
+      <div class="chips-group" *ngFor="let group of groups">
+        <span>{{group.group | i18n: i18nSourcePath}}</span>
+        <div class="chips-list">
+          <app-chip *ngFor="let text of group.texts" [text]="text"></app-chip>
+        </div>
+      </div>
+    </ng-template>
+  </app-group>
+</div>

@@ -1,0 +1,14 @@
+.chip {
+  border-radius: 25px;
+  line-height: 32px;
+  padding: 0 15px;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  background-color: var(--app-chip);
+
+  span {
+    color: var(--app-text);
+  }
+}

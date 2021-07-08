@@ -1,0 +1,9 @@
+<div class="group">
+  <div>
+    <span *ngIf="trail" class="group-trail">{{trail}}</span>
+    <h2 class="group-title">{{title}}</h2>
+  </div>
+  <div class="group-content">
+    <ng-container *ngTemplateOutlet="templateRef"></ng-container>
+  </div>
+</div>
