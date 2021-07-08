@@ -8,6 +8,10 @@
     "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
   },
   "about-me": {
+    "overview": {
+      "title": "Overview",
+      "description": "My passion for coding was born in school where I began writing some simple applications using Delphi. Later during my university period I've got acquainted with more advanced programming languages, such as C++, Kotlin, Java, JavaScript, Python and the most important (at least for me) - C#.\n\nNow I am a full stack software developer. During my work experience I've used different kinds of languages and toolsets. For instance at the first job I was using Xamaring framework for developing a cross-platform chat bot. Than I used C# and ASP NET MVC for writing BE logic and JavaScript with Jquery plugin for FE part. Also I've used Unity for implementing a new feature for the existing game and developing a brand new AR application from scratch. Today in my work I am using C# (ASP.NET Core) and TypeScript (Angular 8).\n\nI like to learn new technologies. I have a quite good experience with Unity Engine so that I even created a mobile game called \"Drag and Score\" which you can find in Google Play Store. Also during my free time I've managed to learn Flutter framework and its main language - Dart. As a result of my studying I've developed a cross-platform mobile application for automating a process of creating HTTP API requests from clients to the server."
+    },
     "skills": {
       "title": "Skills",
       "languages": "Languages",

@@ -1,17 +1,21 @@
 <div class="about-me">
-  <div>Overview</div>
+  <app-group [title]="title | i18n: overviewPageName">
+    <ng-template>
+      <span>{{'description' | i18n: overviewPageName}}</span>
+    </ng-template>
+  </app-group>
   <app-chips 
     [i18nSourcePath]="skillsPageName"
-    [title]="'title' | i18n: skillsPageName" 
+    [title]="title | i18n: skillsPageName" 
     [groups]="skills"
   ></app-chips>
   <app-list-tiles
-    [title]="'title' | i18n: workExperiencesPageName"
+    [title]="title | i18n: workExperiencesPageName"
     [i18nSourcePath]="workExperiencesPageName"
     [listTiles]="workExperiences"
   ></app-list-tiles>
   <app-list-tiles
-    [title]="'title' | i18n: educationsPageName"
+    [title]="title | i18n: educationsPageName"
     [i18nSourcePath]="educationsPageName"
     [listTiles]="educations"
     [showAllDuration]="false"

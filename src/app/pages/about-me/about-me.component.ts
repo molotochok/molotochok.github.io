@@ -9,11 +9,17 @@ import { ChipGroup } from '@/app/models/chip-group.model';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
+
+  title = 'title';
   pageName = 'about-me';
 
   skills: ChipGroup[] = skills;
   workExperiences: ListTile[] = workExperiences;
   educations: ListTile[] = educations;
+
+  get overviewPageName() {
+    return this.pageName + '/overview';
+  }
 
   get skillsPageName() {
     return this.pageName + '/skills';
