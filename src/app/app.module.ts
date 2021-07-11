@@ -19,6 +19,7 @@ import { ListTilesComponent } from './components/list-tiles/list-tiles.component
 import { ChipComponent } from './components/chip/chip.component';
 import { ChipsComponent } from './components/chips/chips.component';
 import { GroupComponent } from './components/group/group.component';
+import { EmbedVideoComponent } from './components/embed-video/embed-video.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { GroupComponent } from './components/group/group.component';
     ChipComponent,
     ChipsComponent,
     GroupComponent,
+    EmbedVideoComponent,
   ],
   imports: [
     BrowserModule,

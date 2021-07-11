@@ -1,0 +1,26 @@
+.drag-and-score {
+  padding: 15px;
+  
+  .logo {
+    text-align: center;
+
+    img {
+      margin: auto;
+    }
+  }
+
+  .description {
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+
+  .title {
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-size: 40px;
+    }
+  }
+}

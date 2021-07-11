@@ -7,6 +7,12 @@
     "descriptionTitle": "Description",
     "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
   },
+  "drag-and-score": {
+    "description": {
+      "title": "Description",
+      "content": "Drag and Score is a time killer. Try to reach your maximum score by passing interesting and hard levels. Be careful - ball may fall out of a basket.\n\nFeatures:\n\t- 49 interesting and hard levels;\n\t- easy to learn how to play;\n\t- cool physics of the ball;\n\t- 2 types of game (linear and random). You should open levels by passing them in linear mode so that you can easily play on this levels in random mode, where levels are going in random way.\n\t- 5 chapters, where each one has it's own new feature, for example: moving platforms, portals and ...(play to find out:)."
+    }
+  },
   "about-me": {
     "overview": {
       "title": "Overview",

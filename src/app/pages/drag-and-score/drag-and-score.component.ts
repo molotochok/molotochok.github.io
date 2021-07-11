@@ -1,4 +1,6 @@
+import { Video } from '@models/video.model';
 import { Component, OnInit } from '@angular/core';
+import { i18nKeys, title, video } from './config';
 
 @Component({
   selector: 'app-drag-and-score',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DragAndScoreComponent implements OnInit {
 
-  constructor() { }
+  title: string = title;
+  video: Video = video;
+  i18nKeys: any = i18nKeys;
+
+  i18nSourcePath = 'drag-and-score';
+
+  get descriptioni18nPath() {
+    return this.i18nSourcePath + '/description';
+  }
 
   ngOnInit(): void {
   }
