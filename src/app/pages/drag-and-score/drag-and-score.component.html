@@ -5,10 +5,15 @@
   <div class="title">
     <span>{{title}}</span>
   </div>
-  <div>
-    Download
+  <div class="buttons">
+    <a class="app-btn download-btn" [href]="playStoreLink" target="_blank">
+      <div class="icon" [ngStyle]="downloadIconStyle"></div>
+      {{i18nKeys.download | i18n: i18nSourcePath}}
+    </a> 
+    <a class="app-btn">
+      {{i18nKeys.playOnline | i18n: i18nSourcePath}}
+    </a>
   </div>
-  <div>(Optional) webview</div>
   <div class="description">
     <app-group [title]="i18nKeys.description.title | i18n: descriptioni18nPath">
       <ng-template>
@@ -16,11 +21,18 @@
       </ng-template>
     </app-group>
   </div>
-  <div>
-    Technologies
+  <div class="technologies">
+    <app-chips 
+      [i18nSourcePath]="technologiesi18nPath"
+      [title]="i18nKeys.technologies.title  | i18n: technologiesi18nPath" 
+      [groups]="technologies"
+    ></app-chips>
   </div>
   <div>
     Images
+    <!-- TODO: Try to embed video into image gallery -->
+    <!-- TODO: Create a new component called gallery -->
+    <!-- TODO: Probably should to create a new component called interactable image.  -->
   </div>
   <app-embed-video [video]="video"></app-embed-video>
 </div>

@@ -5,33 +5,39 @@ export enum ThemeTypes {
 
 /* Template: --c<from color>-<for what>  */
 export interface Theme {
-  '--app-main': string;
+  '--app-background': string;
   '--app-text': string;
-  '--app-menu': string;
+  '--app-light-text': string;
+  '--app-primary': string;
   '--app-menu-item': string;
   '--app-menu-item-active': string;
   '--app-btn': string;
   '--app-chip': string;
+  '--app-android': string;
 }
 
 export class LightTheme implements Theme {
-  '--app-main' = '#eeeeee';
+  '--app-background' = '#eeeeee';
   '--app-text' = '#000000';
-  '--app-menu' = '#0064b7';
+  '--app-light-text' = '#FFFFFF';
+  '--app-primary' = '#0064b7';
   '--app-menu-item' = '#64c1ff';
   '--app-menu-item-active' = '#eeeeee';
   '--app-btn' = '#ff5252';
-  '--app-chip' = '#ffb04c';
+  '--app-chip' = '#ffa270';
+  '--app-android' = '#3BD580';
 }
 
 export class DarkTheme implements Theme {
-  '--app-main' = '#303030';
+  '--app-background' = '#303030';
   '--app-text' = '#FFFFFF';
-  '--app-menu' = '#191919';
+  '--app-light-text' = '#FFFFFF';
+  '--app-primary' = '#191919';
   '--app-menu-item' = '#3e4042';
   '--app-menu-item-active' = '#303030';
   '--app-btn' = '#3f51b5';
-  '--app-chip' = '#bc5100';
+  '--app-chip' = '#c63f17';
+  '--app-android' = '#3BD580';
 }
 
 export const THEMES = {
