@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/unity/TemplateData/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/unity/TemplateData/UnityProgress.js",
+              "src/unity/Build/UnityLoader.js"
+            ]
           },
           "configurations": {
             "production": {

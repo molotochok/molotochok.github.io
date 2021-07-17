@@ -18,6 +18,7 @@
   .title {
     text-align: center;
     margin-bottom: 15px;
+    width: 100%;
 
     span {
       font-weight: bold;
@@ -31,6 +32,11 @@
 
     .download-btn {
       margin-right: 20px;
+
+      &:hover {
+        color: var(--app-light-text);
+        text-decoration: none;
+      }
 
       .icon {
         background-color: var(--app-android);

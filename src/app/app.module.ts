@@ -20,6 +20,8 @@ import { ChipComponent } from './components/chip/chip.component';
 import { ChipsComponent } from './components/chips/chips.component';
 import { GroupComponent } from './components/group/group.component';
 import { EmbedVideoComponent } from './components/embed-video/embed-video.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DasDemoComponent } from './components/das-demo/das-demo.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { EmbedVideoComponent } from './components/embed-video/embed-video.compon
     ChipsComponent,
     GroupComponent,
     EmbedVideoComponent,
+    DasDemoComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    NgbModule
   ],
   providers: [I18nService, ThemeService, DateDurationService, I18nPipe],
   bootstrap: [AppComponent]

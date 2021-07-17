@@ -1,0 +1,16 @@
+<ng-template #modalContent let-modal >
+  <div class="das-demo">
+    <div class="modal-header">
+      <h5 class="title">Drag And Score</h5>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+      <div class="unity-fullscreen" ngbAutofocus  [ngStyle]="fullscreenIconStyle" (click)="unityInstance.SetFullscreen(1)"></div>
+    </div>
+    <div class="modal-body">
+      <div class="webgl-content">
+        <div id="unityContainer" class="unity-container"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
