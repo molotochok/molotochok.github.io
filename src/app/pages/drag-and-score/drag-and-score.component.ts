@@ -1,7 +1,8 @@
-import { Video } from '@models/video.model';
 import { Component, OnInit } from '@angular/core';
-import { i18nKeys, playStoreLink, technologies, title, video } from './config';
-import { ChipGroup } from '@/app/models/chip-group.model';
+import { i18nKeys, playStoreLink, technologies, title, mediaList } from './config';
+import { ChipGroup } from '@models/chip-group.model';
+import { IconStyleService } from '@services/icon-style.service';
+import { Media } from '@models/media.model';
 
 @Component({
   selector: 'app-drag-and-score',
@@ -12,9 +13,9 @@ export class DragAndScoreComponent implements OnInit {
 
   title: string = title;
   playStoreLink: string = playStoreLink;
-  video: Video = video;
   i18nKeys: any = i18nKeys;
   technologies: ChipGroup[] = technologies;
+  mediaList: Media[] = mediaList;
 
   get i18nSourcePath() {
     return 'drag-and-score';
@@ -29,10 +30,10 @@ export class DragAndScoreComponent implements OnInit {
   }
 
   get downloadIconStyle() {
-    const icon = 'assets/images/drag-and-score/android.svg';
-    const mask = `url('${icon}') no-repeat center`;
-    return { mask, '-webkit-mask': mask };
+    return this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/android.svg');
   }
+
+  constructor(private iconStyleService: IconStyleService) {}
 
   ngOnInit(): void {}
 }

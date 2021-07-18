@@ -1,3 +1,4 @@
+import { IconStyleService } from '@services/icon-style.service';
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,12 +16,13 @@ export class DasDemoComponent implements OnInit {
   unityInstance: any;
 
   get fullscreenIconStyle() {
-    const icon = 'assets/images/drag-and-score/fullscreen.svg';
-    const mask = `url('${icon}') no-repeat center`;
-    return { mask, '-webkit-mask': mask };
+    return this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/fullscreen.svg');
   }
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    private iconStyleService: IconStyleService
+  ) {}
 
   ngOnInit(): void {}
 

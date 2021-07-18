@@ -1,7 +1,7 @@
 import { Media } from './media.model';
 
-export class Video extends Media {
-  isVideo() {
+export class Image extends Media {
+  isImage() {
     return true;
   }
 }

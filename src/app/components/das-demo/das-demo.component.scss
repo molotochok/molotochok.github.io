@@ -1,65 +1,30 @@
 .das-demo {
-  .modal-header {
-    display: block;
-    border-bottom: 0;
-    height: 56px;
-
-    .title {
-      font-weight: bold;
-    }
-
-    .close {
-      padding: 5px 10px 5px 12px;
-      text-shadow: none;
-      opacity: 1;
-      outline: 0;
-      cursor: default;
-    
-      &:not(:disabled):not(.disabled):hover {
-        opacity: 0.75;
-      }
-    
-      &:not(:disabled):not(.disabled):focus {
-        opacity: unset;
-      }
-    
-      span {
-        font-size: 47px;
-        cursor: pointer;
-      }
-    }
-
-    .unity-fullscreen {
-      background-color: var(--app-text);
-      width: 22px;
-      height:100%;
-      float: right;
-      cursor: pointer;
-    
-      &:hover {
-        opacity: 0.75;
-      }
+  .unity-fullscreen {
+    background-color: var(--app-text);
+    width: 22px;
+    height:100%;
+    float: right;
+    cursor: pointer;
+  
+    &:hover {
+      opacity: 0.75;
     }
   }
 
-  .modal-body {
-    padding: 0;
-
-    .webgl-content {
-      position: relative; 
-      transform: none; 
-      left: 0; 
-      right: 0;
-    
-      .unity-container {
-        width: 960px;
-        height: 540px;
-      }
+  .webgl-content {
+    position: relative; 
+    transform: none; 
+    left: 0; 
+    right: 0;
   
-      .footer {
-        margin: 0;
-        height: 50px;
-      }
+    .unity-container {
+      width: 960px;
+      height: 540px;
+    }
+
+    .footer {
+      margin: 0;
+      height: 50px;
     }
   }
 }

@@ -1,0 +1,33 @@
+<div class="gallery">
+  <div class="gallery-content">
+    <div class="icon prev" [ngStyle]="arrowIconStyle" (click)="prev()"></div>
+    <div class="media-list-container">
+      <ul class="media-list" [ngStyle]="mediaStyle">
+        <li *ngFor="let media of mediaList; let i = index" [ngClass]="activeClass(i)">
+          <app-embed-video *ngIf="media.isVideo()" [video]="media"></app-embed-video>
+          <img *ngIf="media.isImage()" [src]="media.uri" (click)="imgClick()">
+        </li>
+      </ul>
+    </div>
+    <div class="icon" [ngStyle]="arrowIconStyle" (click)="next()"></div>
+  </div>
+  <div class="gallery-dots">
+    <div 
+      *ngFor="let media of mediaList; let i = index"
+      class="dot"
+      [ngClass]="activeClass(i)"
+      (click)="dotClick(i)"
+    >&bull;</div>
+  </div>
+
+  <ng-template #imgModal let-modal>
+    <div class="modal-header">
+      <button class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img [src]="mediaList[activeIndex].uri">
+    </div>
+  </ng-template>
+</div>

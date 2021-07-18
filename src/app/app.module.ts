@@ -22,6 +22,8 @@ import { GroupComponent } from './components/group/group.component';
 import { EmbedVideoComponent } from './components/embed-video/embed-video.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DasDemoComponent } from './components/das-demo/das-demo.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { IconStyleService } from './services/icon-style.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { DasDemoComponent } from './components/das-demo/das-demo.component';
     GroupComponent,
     EmbedVideoComponent,
     DasDemoComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ import { DasDemoComponent } from './components/das-demo/das-demo.component';
     MatButtonModule,
     NgbModule
   ],
-  providers: [I18nService, ThemeService, DateDurationService, I18nPipe],
+  providers: [I18nService, ThemeService, DateDurationService, I18nPipe, IconStyleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
