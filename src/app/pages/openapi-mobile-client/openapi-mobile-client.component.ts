@@ -36,6 +36,6 @@ export class OpenapiMobileClientComponent implements OnInit {
   }
 
   initDownloadIconStyle(): void {
-    this.downloadIconStyle = this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/android.svg');
+    this.downloadIconStyle = this.iconStyleService.getStyleWithMask('assets/images/android.svg');
   }
 }

@@ -9,7 +9,7 @@
     },
     "description": {
       "title": "Description",
-      "content": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
+      "content": "This application allows user to easily and quickly perform HTTP requests from mobile devices to the servers that support OpenAPI interface. OpenAPI creates documentation of the application API which is used for building the graphical interface. After specifying the server address user can see the structure of the API of this service, specifically: its controllers, methods and their parameters. Moreover, depending on the type of the parameter appropriate graphical element will be displayed. For example, for the text type the text field will be displayed, for date - calendar and etc. To perform the request user needs to select specific method, enter data into appropriate parameters and click on the send button. Herewith, validation will be performed and in case there is no errors the message will be sent.\n\nKey features:\n\t- building of the graphical interface depending on the metadata;\n\t- validation of the entered data;\n\t- specifying token authorization;\n\t- making HTTP/HTTPS request.\n\nMain advantages:\n\t- user has the whole information about the API structure;\n\t- it is harder to make the mistake while creating a new request;\n\t- productivity is increased working with API on mobile platforms;\n\t- it is much more convenient to use than analogues."
     }
   },
   "drag-and-score": {

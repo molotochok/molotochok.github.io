@@ -2,6 +2,7 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import 'assets/styles/project-page.scss';
+@import 'assets/styles/modal-dialog.scss';
 
 body {
   height: 100%;
@@ -19,49 +20,6 @@ body {
 pre {
   color: var(--app-text);
   font-family: "Heebo", sans-serif;
-}
-
-.modal-dialog {
-  max-width: fit-content;
-
-  .modal-content {
-    background-color: var(--app-background);
-
-    .modal-header {
-      display: block;
-      border-bottom: 0;
-      height: 56px;
-  
-      .title {
-        font-weight: bold;
-      }
-  
-      .close {
-        padding: 5px 10px 5px 12px;
-        text-shadow: none;
-        opacity: 1;
-        outline: 0;
-        cursor: default;
-      
-        &:not(:disabled):not(.disabled):hover {
-          opacity: 0.75;
-        }
-      
-        &:not(:disabled):not(.disabled):focus {
-          opacity: unset;
-        }
-      
-        span {
-          font-size: 47px;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .modal-body {
-      padding: 0;
-    }
-  }
 }
 
 .app-center {
@@ -96,6 +54,12 @@ pre {
   &:active {
     filter: brightness(80%);
   }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
 }
 
 @for $i from 0 through 100 {
