@@ -1,4 +1,8 @@
 .das-demo {
+  .close {
+    user-select: none;
+  }
+
   .unity-fullscreen {
     background-color: var(--app-text);
     width: 22px;

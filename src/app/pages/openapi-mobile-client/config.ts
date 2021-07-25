@@ -24,6 +24,7 @@ export const technologies: ChipGroup[] = [
 
 const imageAddressTemplate = (index: number) => `assets/images/openapi-mobile-client/screenshots/${index}.jpg`;
 const mediaWidth = 280;
+const mediaHeight = 600;
 export const mediaList: Media[] = [
-  ...[...Array(3).keys()].map(n => new Image(imageAddressTemplate(n + 1), mediaWidth))
+  ...[...Array(12).keys()].map(n => new Image(imageAddressTemplate(n + 1), mediaWidth, mediaHeight))
 ];
