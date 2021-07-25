@@ -3,9 +3,14 @@
   "year": "y",
   "month": "m",
   "openapi-mobile-client": {
-    "download": "Download",
-    "descriptionTitle": "Description",
-    "description": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
+    "download": "Download (soon)",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "description": {
+      "title": "Description",
+      "content": "The OpenAPI Mobile Client is the mobile application which helps user to easily perform HTTP requests using their mobile devices."
+    }
   },
   "drag-and-score": {
     "download": "Download",

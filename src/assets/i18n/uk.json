@@ -3,9 +3,14 @@
   "year": "р",
   "month": "м",
   "openapi-mobile-client": {
-    "download": "Завантажити",
-    "descriptionTitle": "Опис",
-    "description": "Кекіч"
+    "download": "Завантажити (незабаром)",
+    "technologies": {
+      "title": "Технології"
+    },
+    "description": {
+      "title": "Опис",
+      "content": "Детальний опис буде тут...."
+    }
   },
   "drag-and-score": {
     "download": "Завантажити",

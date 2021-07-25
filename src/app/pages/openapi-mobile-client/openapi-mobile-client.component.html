@@ -1,40 +1,29 @@
-<div class="openapi-mobile-client">
-  <div class="app-mb-20">
-    <div>
-      <div class="app-center">
-        <img class="logo" src="assets/images/openapi-mobile-client/logo.png">
-      </div>
-        <h1 class="app-center">OpenAPI Mobile Client</h1>
-    </div>
-    <div class="app-center">
-        <button mat-raised-button class="app-btn"><h2>{{i18nKeys.download | i18n: pageName}}</h2></button>
-    </div>
+<div class="openapi-mobile-client app-project-page">
+  <div class="logo">
+    <img src="assets/images/openapi-mobile-client/logo.png">
   </div>
-
+  <div class="title">
+    <span>{{title}}</span>
+  </div>
+  <div class="buttons">
+    <a class="app-btn download-btn" target="_blank">
+      <div class="icon" [ngStyle]="downloadIconStyle"></div>
+      {{i18nKeys.download | i18n: i18nSourcePath}}
+    </a>
+  </div>
   <div class="description">
-    <div>
-      <div>{{i18nKeys.descriptionTitle | i18n: pageName}}</div>
-    </div>
-    <div>
-      <p>{{i18nKeys.description | i18n: pageName}}</p>
-    </div>
+    <app-group [title]="i18nKeys.description.title | i18n: descriptioni18nPath">
+      <ng-template>
+        <pre>{{i18nKeys.description.content | i18n: descriptioni18nPath}}</pre>
+      </ng-template>
+    </app-group>
   </div>
-  <div>
-      Video demonstrating how it works
+  <div class="technologies">
+    <app-chips 
+      [i18nSourcePath]="technologiesi18nPath"
+      [title]="i18nKeys.technologies.title  | i18n: technologiesi18nPath" 
+      [groups]="technologies"
+    ></app-chips>
   </div>
-  <div>
-      Images section
-  </div>
-  <div>
-      Core features should be mentioned in some table or something
-  </div>
-  <div>
-      Section with more details
-      There could be added necessary info for Google Play Developer Console
-  </div>
-
-  <div>
-      Probably add some footer mmentioning copyrights and etc
-      Could add some additional ways to connect to me
-  </div>
+  <app-gallery [mediaList]="mediaList"></app-gallery>
 </div>

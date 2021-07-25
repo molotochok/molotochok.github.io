@@ -1,8 +1,9 @@
 export abstract class Media {
   public constructor(
     public uri: string,
-    public width: string = '750px',
-    public height: string = '422px',
+    // In pixels
+    public width: number = null,
+    public height: number = null,
   ) {}
 
   isVideo() {

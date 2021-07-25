@@ -16,6 +16,7 @@ export class DragAndScoreComponent implements OnInit {
   i18nKeys: any = i18nKeys;
   technologies: ChipGroup[] = technologies;
   mediaList: Media[] = mediaList;
+  downloadIconStyle: {};
 
   get i18nSourcePath() {
     return 'drag-and-score';
@@ -29,11 +30,13 @@ export class DragAndScoreComponent implements OnInit {
     return this.i18nSourcePath + '/technologies';
   }
 
-  get downloadIconStyle() {
-    return this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/android.svg');
-  }
-
   constructor(private iconStyleService: IconStyleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initDownloadIconStyle();
+  }
+
+  initDownloadIconStyle(): void {
+    this.downloadIconStyle = this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/android.svg');
+  }
 }

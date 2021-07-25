@@ -1,15 +1,18 @@
 <div class="gallery">
   <div class="gallery-content">
-    <div class="icon prev" [ngStyle]="arrowIconStyle" (click)="prev()"></div>
-    <div class="media-list-container">
-      <ul class="media-list" [ngStyle]="mediaStyle">
-        <li *ngFor="let media of mediaList; let i = index" [ngClass]="activeClass(i)">
+    <div class="icon prev" [ngStyle]="arrowIconStyle" (click)="prevClick()"></div>
+    <div class="media-list-container" [ngStyle]="mediaListContainerStyle">
+      <ul class="media-list" [ngStyle]="mediaListStyle">
+        <li *ngFor="let media of mediaList; let i = index" 
+          [ngClass]="activeClass(i)"
+          [ngStyle]="mediaStyle"
+        >
           <app-embed-video *ngIf="media.isVideo()" [video]="media"></app-embed-video>
-          <img *ngIf="media.isImage()" [src]="media.uri" (click)="imgClick()">
+          <img *ngIf="media.isImage()" [src]="media.uri" [ngStyle]="imgStyle" (click)="imgClick()">
         </li>
       </ul>
     </div>
-    <div class="icon" [ngStyle]="arrowIconStyle" (click)="next()"></div>
+    <div class="icon" [ngStyle]="arrowIconStyle" (click)="nextClick()"></div>
   </div>
   <div class="gallery-dots">
     <div 

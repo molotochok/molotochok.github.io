@@ -1,0 +1,50 @@
+.app-project-page {
+  padding: 15px;
+  
+  .logo {
+    text-align: center;
+
+    img {
+      margin: auto;
+    }
+  }
+
+  .description {
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+
+    span {
+      font-weight: bold;
+      font-size: 40px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+
+    .download-btn {
+      margin-right: 20px;
+
+      &:hover {
+        color: var(--app-light-text);
+        text-decoration: none;
+      }
+
+      .icon {
+        background-color: var(--app-android);
+        width: 30px;
+        height: 100%;
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+}

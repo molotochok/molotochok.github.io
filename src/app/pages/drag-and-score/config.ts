@@ -27,7 +27,9 @@ export const technologies: ChipGroup[] = [
 ];
 
 const imageAddressTemplate = (index: number) => `assets/images/drag-and-score/screenshots/${index}.webp`;
+const mediaWidth = 750;
+const mediaHeight = 422;
 export const mediaList: Media[] = [
-  new Video('https://www.youtube.com/embed/2AUuK1IAJPg'),
-  ...[...Array(8).keys()].map(n => new Image(imageAddressTemplate(n + 1)))
+  new Video('https://www.youtube.com/embed/2AUuK1IAJPg', mediaWidth, mediaHeight),
+  ...[...Array(8).keys()].map(n => new Image(imageAddressTemplate(n + 1), mediaWidth, mediaHeight))
 ];

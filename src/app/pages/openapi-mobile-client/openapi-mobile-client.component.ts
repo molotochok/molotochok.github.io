@@ -1,6 +1,8 @@
-import { I18nKeys } from '@/app/models/consts/i18n-keys.model';
-import { I18nPipe } from '@/app/pipes/i18n.pipe';
+import { ChipGroup } from '@models/chip-group.model';
+import { Media } from '@models/media.model';
+import { IconStyleService } from '@services/icon-style.service';
 import { Component, OnInit } from '@angular/core';
+import { i18nKeys, technologies, title, mediaList } from './config';
 
 @Component({
   selector: 'app-openapi-mobile-client',
@@ -9,10 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpenapiMobileClientComponent implements OnInit {
 
-  public readonly pageName = 'openapi-mobile-client';
-  public i18nKeys = I18nKeys.OpenApiMobileClient;
+  title: string = title;
+  i18nKeys: any = i18nKeys;
+  technologies: ChipGroup[] = technologies;
+  mediaList: Media[] = mediaList;
+  downloadIconStyle: {};
 
-  constructor(private translator: I18nPipe) {}
+  get i18nSourcePath() {
+    return 'openapi-mobile-client';
+  }
 
-  ngOnInit() {}
+  get descriptioni18nPath() {
+    return this.i18nSourcePath + '/description';
+  }
+
+  get technologiesi18nPath() {
+    return this.i18nSourcePath + '/technologies';
+  }
+
+  constructor(private iconStyleService: IconStyleService) {}
+
+  ngOnInit(): void {
+    this.initDownloadIconStyle();
+  }
+
+  initDownloadIconStyle(): void {
+    this.downloadIconStyle = this.iconStyleService.getStyleWithMask('assets/images/drag-and-score/android.svg');
+  }
 }

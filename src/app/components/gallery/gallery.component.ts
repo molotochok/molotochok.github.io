@@ -1,7 +1,7 @@
 import { IconStyleService } from '@services/icon-style.service';
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Media } from '@/app/models/media.model';
+import { Media } from '@models/media.model';
 
 
 @Component({
@@ -10,22 +10,34 @@ import { Media } from '@/app/models/media.model';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
+  static DEFAULT_SPACE_BETWEEN = 150;
 
   @ViewChild('imgModal') imgModal: TemplateRef<any>;
+
   @Input() mediaList: Media[];
+  @Input() spaceBetween: number;
+
+  mediaStyle: {};
+  arrowIconStyle: {};
+  dotsIconStyle: {};
+  imgStyle: {};
 
   activeIndex = 0;
 
-  get arrowIconStyle() {
-    return this.iconStyleService.getStyleWithMask('assets/images/next.svg');
+  get viewportWidth() {
+    return this.mediaList[0].width + this.spaceBetween;
   }
 
-  get dotsIconStyle() {
-    return this.iconStyleService.getStyleWithMask('assets/images/dot.svg');
+  get mediaListStyle() {
+    return {
+      transform: `translateX(-${this.activeIndex * this.viewportWidth}px)`
+    };
   }
 
-  get mediaStyle() {
-    return {transform: `translateX(-${this.activeIndex * 800}px)` };
+  get mediaListContainerStyle() {
+    return {
+      width: `${this.viewportWidth}px`,
+    };
   }
 
   constructor(
@@ -33,19 +45,55 @@ export class GalleryComponent implements OnInit {
     private iconStyleService: IconStyleService
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.spaceBetween ??= GalleryComponent.DEFAULT_SPACE_BETWEEN;
+
+    this.initMediaStyle();
+    this.initArrowIconStyle();
+    this.initDotsIconStyle();
+    this.initImgStyle();
+  }
 
   activeClass(index: number) {
     return this.activeIndex === index ? 'active' : '';
   }
 
-  prev(): void {
+  /*** Init functions  ***/
+  initMediaStyle(): void {
+    const halfSpace = this.spaceBetween / 2;
+
+    this.mediaStyle = {
+      'margin-left': halfSpace + 'px',
+      'margin-right': halfSpace + 'px'
+    };
+  }
+  initArrowIconStyle(): void {
+    this.arrowIconStyle = this.iconStyleService.getStyleWithMask('assets/images/next.svg');
+  }
+
+  initDotsIconStyle(): void {
+    this.dotsIconStyle = this.iconStyleService.getStyleWithMask('assets/images/dot.svg');
+  }
+
+  initImgStyle() {
+    const toCssProperty = (num: number) => {
+      return num ? num + 'px' : 'auto';
+    };
+
+    this.imgStyle = {
+      width: toCssProperty(this.mediaList[0].width),
+      height: toCssProperty(this.mediaList[0].height)
+    };
+  }
+
+  /*** Event Handlers ***/
+  prevClick(): void {
     this.activeIndex = this.activeIndex === 0
       ? this.mediaList.length - 1
       : this.activeIndex - 1;
   }
 
-  next(): void {
+  nextClick(): void {
     this.activeIndex = (this.activeIndex + 1) % this.mediaList.length;
   }
 

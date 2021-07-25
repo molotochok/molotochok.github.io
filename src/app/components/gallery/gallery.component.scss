@@ -9,6 +9,7 @@
       margin: auto 0;
       cursor: pointer;
       font-size: 30px;
+      margin: auto;
     
       &:hover {
         opacity: 75%;
@@ -20,8 +21,6 @@
     }
 
     .media-list-container {
-      margin: auto;
-      width: 800px;
       padding: 0;
       user-select: none;
       overflow: hidden;
@@ -33,13 +32,7 @@
   
         li {
           list-style-type: none;
-          margin-right: 50px;
           cursor: pointer;
-    
-          img {
-            width: 750px;
-            height: 422px;
-          }
         }
       }
     }
@@ -65,5 +58,11 @@
     .active {
       opacity: 100%;
     }
+  }
+}
+
+.modal-body {
+  img {
+    max-height: 85vh;
   }
 }
