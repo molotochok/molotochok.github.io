@@ -2,6 +2,24 @@
   "locale": "uk",
   "year": "р",
   "month": "м",
+  "languages": {
+    "en": "Англійська",
+    "uk": "Українська"
+  },
+  "themes": {
+    "light": "Світла",
+    "dark": "Темна"
+  },
+  "menu": {
+    "about-me": "Про мене",
+    "drag-and-score": "Drag And Score",
+    "openapi-mobile-client": "OpenAPI Mobile Client",
+    "settings": {
+      "title": "Налаштування",
+      "language": "Мова",
+      "theme": "Тема"
+    }
+  },
   "openapi-mobile-client": {
     "download": "Завантажити (незабаром)",
     "technologies": {

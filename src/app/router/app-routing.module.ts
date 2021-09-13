@@ -9,21 +9,21 @@ export const ROUTES: Routes = [
     path: '',
     component: AboutMeComponent,
     data: {
-      title: "About Me"
+      titleI18nKey: 'about-me'
     }
   },
   {
     path: 'openapi-mobile-client',
     component: OpenapiMobileClientComponent,
     data: {
-      title: "OpenAPI Mobile Client"
+      titleI18nKey: 'openapi-mobile-client'
     }
   },
   {
     path: 'drag-and-score',
     component: DragAndScoreComponent,
     data: {
-      title: "Drag And Score"
+      titleI18nKey: 'drag-and-score'
     }
   },
 ];

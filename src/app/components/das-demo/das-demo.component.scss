@@ -1,18 +1,17 @@
+@import 'mixins';
+
 .das-demo {
   .close {
     user-select: none;
   }
 
   .unity-fullscreen {
+    @include clickable(null);
+
     background-color: var(--app-text);
     width: 22px;
     height:100%;
     float: right;
-    cursor: pointer;
-  
-    &:hover {
-      opacity: 0.75;
-    }
   }
 
   .webgl-content {

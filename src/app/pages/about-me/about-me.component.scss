@@ -1,6 +1,8 @@
-.about-me {
-  padding: 15px;
+@import 'mixins';
 
+@include host;
+
+.about-me {
   .delimiter {
     height: 20px;
   }

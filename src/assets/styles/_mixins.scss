@@ -1,0 +1,36 @@
+@mixin host {
+  :host {
+    height: 100vh;
+    overflow: auto;
+    padding: 15px;
+  }
+}
+
+@mixin clickable($activeClass) {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    $brightness: 80%;
+    
+    @if $activeClass {
+      &:not(#{$activeClass}) {
+        filter: brightness($brightness);
+      }
+    } @else {
+      filter: brightness($brightness);
+    }
+  }
+
+  &:active {
+    $brightness: 75%;
+    
+    @if $activeClass {
+      &:not(#{$activeClass}) {
+        filter: brightness($brightness);
+      }
+    } @else {
+      filter: brightness($brightness);
+    }
+  }
+}

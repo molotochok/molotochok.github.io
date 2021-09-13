@@ -68,7 +68,7 @@ export class GalleryComponent implements OnInit {
     };
   }
   initArrowIconStyle(): void {
-    this.arrowIconStyle = this.iconStyleService.getStyleWithMask('assets/images/next.svg');
+    this.arrowIconStyle = this.iconStyleService.getStyleWithMask('assets/images/arrow.svg');
   }
 
   initDotsIconStyle(): void {

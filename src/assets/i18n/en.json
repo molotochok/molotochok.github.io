@@ -2,6 +2,24 @@
   "locale": "en",
   "year": "y",
   "month": "m",
+  "languages": {
+    "en": "English",
+    "uk": "Ukrainian"
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "menu": {
+    "about-me": "About Me",
+    "drag-and-score": "Drag And Score",
+    "openapi-mobile-client": "OpenAPI Mobile Client",
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "theme": "Theme"
+    }
+  },
   "openapi-mobile-client": {
     "download": "Download (soon)",
     "technologies": {

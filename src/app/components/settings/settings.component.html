@@ -1,0 +1,35 @@
+<ng-template #modalContent let-modal >
+  <div class="modal-header">
+    <h5 class="title">{{i18nKeys.title | i18n: i18nSourcePath}}</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table>
+      <tr>
+        <td style="width: 20%;">{{i18nKeys.language | i18n: i18nSourcePath}}</td>
+        <td>
+          <app-select 
+            [options]="languages"
+            [selectedOption]="currentLanguage"
+            [i18nSourcePath]="languagesI18nPath"
+            (optionSelected)="changeLanguage($event)"
+          ></app-select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>{{i18nKeys.theme | i18n: i18nSourcePath}}</td>
+        <td>
+          <app-select 
+            [options]="themes"
+            [selectedOption]="currentTheme"
+            [i18nSourcePath]="themesI18nPath"
+            (optionSelected)="changeTheme($event)"
+          ></app-select>
+        </td>
+      </tr>
+    </table>
+  </div>
+</ng-template>

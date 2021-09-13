@@ -1,6 +1,6 @@
 import { IconStyleService } from '@services/icon-style.service';
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 declare var UnityLoader: any;
 
@@ -13,6 +13,7 @@ export class DasDemoComponent implements OnInit {
 
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
+  modal: NgbModalRef;
   unityInstance: any;
 
   get fullscreenIconStyle() {
@@ -26,17 +27,31 @@ export class DasDemoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  open() {
+  open(): void {
     const options = {
       ariaLabelledBy: 'modal-drag-and-score',
       keyboard: false
     };
 
-    this.modalService.open(this.modalContent, options).shown.subscribe(() => {
-      this.unityInstance = UnityLoader.instantiate(
-        'unityContainer',
-        'assets/unity/drag-and-score/Desktop.json'
-      );
-    });
+    this.modal = this.modalService.open(this.modalContent, options);
+
+    this.modal.shown.subscribe(() => this.startUnity());
+
+    this.modal.result.then(
+      _ => {},
+      _ => this.quitUnity()
+    );
+  }
+
+  startUnity(): void {
+    this.unityInstance = UnityLoader.instantiate(
+      'unityContainer',
+      'assets/unity/drag-and-score/Desktop.json'
+    );
+  }
+
+  quitUnity(): void {
+    this.unityInstance.Quit();
+    this.unityInstance = null;
   }
 }

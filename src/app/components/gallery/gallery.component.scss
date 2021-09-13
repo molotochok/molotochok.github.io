@@ -1,19 +1,17 @@
+@import 'mixins';
+
 .gallery {
   &-content {
     display: flex;
 
     .icon {
+      @include clickable(null);
+
       background-color: var(--app-text);
       width: 65px;
       height: 65px;
-      margin: auto 0;
-      cursor: pointer;
       font-size: 30px;
       margin: auto;
-    
-      &:hover {
-        opacity: 75%;
-      }
     }
     
     .prev {

@@ -20,8 +20,8 @@ export class LightTheme implements Theme {
   '--app-background' = '#eeeeee';
   '--app-text' = '#000000';
   '--app-light-text' = '#FFFFFF';
-  '--app-primary' = '#0064b7';
-  '--app-menu-item' = '#64c1ff';
+  '--app-primary' = '#388e3c';
+  '--app-menu-item' = '#6abf69';
   '--app-menu-item-active' = '#eeeeee';
   '--app-btn' = '#ff5252';
   '--app-chip' = '#ffa270';

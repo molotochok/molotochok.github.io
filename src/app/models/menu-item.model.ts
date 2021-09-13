@@ -1,6 +1,6 @@
 export class MenuItem {
   public constructor(
-    public title: string,
+    public titleI18nKey: string,
     public pathname: string
   ) {}
 }

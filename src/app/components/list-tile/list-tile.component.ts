@@ -1,6 +1,5 @@
 import { ListTile } from '@models/list-tile.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { I18nKeys } from '@models/consts/i18n-keys.model';
 import { DateDurationService } from '@/app/services/work-duration.service';
 import { I18nService } from '@services/i18n.service';
 

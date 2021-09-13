@@ -1,0 +1,78 @@
+@import 'mixins';
+
+.select {
+  position: relative;
+  min-width: 220px;
+
+  .active {
+    display: block;
+  }
+  
+  .non-active {
+    display: none;
+  }
+  
+  .selected-option {
+    @include clickable(null);
+
+    background-color: var(--app-primary);
+    color: var(--app-light-text);
+    border-bottom: 1px solid var(--app-light-text);
+    padding: 8px 15px;
+    margin: 0 10px;
+  
+    label {
+      margin-bottom: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      color: var(--app-light-text);
+    }
+
+    .arrow {
+      background-color: var(--app-light-text);
+      width: 24px;
+      height: 24px;
+      float: right;
+    
+      &-down {
+        transform: rotate(-90deg);
+      }
+
+      &-up {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  
+  .options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: none;
+    margin: 0 10px;
+    z-index: 1;
+  
+    .option-wrapper {
+      cursor: pointer;
+      color: var(--app-light-text);
+      
+      .option {
+        @include clickable(null);
+
+        color: var(--app-light-text);
+        padding: 12px 15px;
+        background-color: var(--app-menu-item);
+      }
+    }
+  
+    :not(:last-child) {
+      border-bottom: 1px dashed var(--app-light-text);
+    }
+  }
+ 
+  img {
+    height: 24px;
+    width: 40px;
+    margin-right: 10px;
+  }
+}
