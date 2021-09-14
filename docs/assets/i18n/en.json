@@ -1,0 +1,93 @@
+{
+  "locale": "en",
+  "year": "y",
+  "month": "m",
+  "languages": {
+    "en": "English",
+    "uk": "Ukrainian"
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "menu": {
+    "about-me": "About Me",
+    "drag-and-score": "Drag And Score",
+    "openapi-mobile-client": "OpenAPI Mobile Client",
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "theme": "Theme"
+    }
+  },
+  "openapi-mobile-client": {
+    "download": "Download (soon)",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "description": {
+      "title": "Description",
+      "content": "This application allows user to easily and quickly perform HTTP requests from mobile devices to the servers that support OpenAPI interface. OpenAPI creates documentation of the application API which is used for building the graphical interface. After specifying the server address user can see the structure of the API of this service, specifically: its controllers, methods and their parameters. Moreover, depending on the type of the parameter appropriate graphical element will be displayed. For example, for the text type the text field will be displayed, for date - calendar and etc. To perform the request user needs to select specific method, enter data into appropriate parameters and click on the send button. Herewith, validation will be performed and in case there is no errors the message will be sent.\n\nKey features:\n\t- building of the graphical interface depending on the metadata;\n\t- validation of the entered data;\n\t- specifying token authorization;\n\t- making HTTP/HTTPS request.\n\nMain advantages:\n\t- user has the whole information about the API structure;\n\t- it is harder to make the mistake while creating a new request;\n\t- productivity is increased working with API on mobile platforms;\n\t- it is much more convenient to use than analogues."
+    }
+  },
+  "drag-and-score": {
+    "download": "Download",
+    "play-online": "Play online",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "description": {
+      "title": "Description",
+      "content": "Drag and Score is a time killer. Try to reach your maximum score by passing interesting and hard levels. Be careful - ball may fall out of a basket.\n\nFeatures:\n\t- 49 interesting and hard levels;\n\t- easy to learn how to play;\n\t- cool physics of the ball;\n\t- 2 types of game (linear and random). You should open levels by passing them in linear mode so that you can easily play on this levels in random mode, where levels are going in random way.\n\t- 5 chapters, where each one has it's own new feature, for example: moving platforms, portals and ...(play to find out:)."
+    }
+  },
+  "about-me": {
+    "overview": {
+      "title": "Overview",
+      "description": "My passion for coding was born in school where I began writing some simple applications using Pascal, Delphi. Later during my university period I've got acquainted with more advanced programming languages, such as C++, Kotlin, Java, JavaScript, Python, C#, Ruby.\n\nNow I am a full stack software developer. During my work experience I've used different kinds of languages and toolsets. For instance at the first job I was using Xamarin framework for developing a cross-platform chat bot. Than I used C# and ASP NET MVC for writing BE logic and JavaScript with Jquery library for FE part. Also I've used Unity for implementing a new feature for the existing game and developing a brand new AR application from scratch. Today in my work I am using C# (ASP.NET Core) and TypeScript (Angular 8).\n\nI like to learn new technologies. I have a good experience with Unity so that I even created a mobile game called \"Drag and Score\" which you can find in Google Play Store. Also during my free time I've managed to learn Flutter framework and its main language - Dart. As a result of my studying I've developed a cross-platform mobile application for automating a process of creating HTTP API requests from clients to the server."
+    },
+    "skills": {
+      "title": "Skills",
+      "languages": "Languages",
+      "databases": "Databases",
+      "frameworks": "Frameworks",
+      "libraries": "Libraries"
+    },
+    "work-experiences": {
+      "title": "Work Experience",
+      "data-art": {
+        "description": "Working with the project which is written using Ruby on Rails framework. Integrating this project to the main system which is based on .NET technologies.\nUsing the following technologies: Ruby on Rails, Sidekiq, RSpec, React, ASP.NET Core, PostgreSQL, T-SQL, MongoDB.\nOn this project I communicate with clients a lot (even more than on my previous project) since they are a part of our dev team.",
+        "location": "Kyiv/Remote",
+        "company": "DataArt",
+        "position": "Full Stack Software Developer"
+      },
+      "redwerk": {
+        "description": "Participating in creating a new WEB application based on microservices. For creating a back-end logic using a ASP.NET Core. For creating a front-end logic - Angular 8. Working with Cosmos DB and Docker. Participating in meetings with clients to fully understand requirements.",
+        "location": "Kyiv/Remote",
+        "company": "Redwerk",
+        "position": "Full Stack Software Developer"
+      },
+      "pnn-soft": {
+        "description": "Maintained existing monolith WEB application, created using framework ASP NET MVC. Was writing code for back-end part using C# language as well as for front-end part using a JavaScript and JQuery library. Because I have some experience with Unity I also participated in two different projects where we used this engine. The first one was a runner game. Here I developed a new level by writing a new functionality and placing 3d models in a scene as a game designer. In the second project I developed a simple Augmented Reality mobile application using Unity Foundation.",
+        "location": "Kyiv",
+        "company": "PNN-Soft",
+        "position": "Full Stack Software Developer"
+      },
+      "freelance": {
+        "description": "Developed a small mobile chatbot, where the user had the opportunity to enter a command and get the necessary response from the server. In order to create this application I used Xamarin framefork, and for deployment - AppCenter. Long polling technology was used to communicate with the server. This work provided me with the necessary knowledge and practical skills in the commercial development of applications that interact with the web.",
+        "location": "Kyiv",
+        "company": "Freelance",
+        "position": "Xamarin Developer"
+      }
+    },
+    "educations": {
+      "title": "Education",
+      "kpi": {
+        "university": "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\"",
+        "specialization": "Software Engineering",
+        "degree": "Master",
+        "description": "One of the best technical universities in Ukraine. Studying here allowed me to gain both theoretical and practical skills in various areas of software development (gamedev, machine learning, web development, big data processing technologies, etc.). In the process of mastering a particular technology, many programs have been created. One of the most prominent among them is the \"OpenAPI Mobile Client \", which became my thesis of the bachelor's program."
+      }
+    }
+  }
+}
