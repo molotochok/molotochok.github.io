@@ -44,7 +44,7 @@
   "about-me": {
     "overview": {
       "title": "Overview",
-      "description": "My passion for coding was born in school where I began writing some simple applications using Delphi. Later during my university period I've got acquainted with more advanced programming languages, such as C++, Kotlin, Java, JavaScript, Python and the most important (at least for me) - C#.\n\nNow I am a full stack software developer. During my work experience I've used different kinds of languages and toolsets. For instance at the first job I was using Xamaring framework for developing a cross-platform chat bot. Than I used C# and ASP NET MVC for writing BE logic and JavaScript with Jquery plugin for FE part. Also I've used Unity for implementing a new feature for the existing game and developing a brand new AR application from scratch. Today in my work I am using C# (ASP.NET Core) and TypeScript (Angular 8).\n\nI like to learn new technologies. I have a quite good experience with Unity Engine so that I even created a mobile game called \"Drag and Score\" which you can find in Google Play Store. Also during my free time I've managed to learn Flutter framework and its main language - Dart. As a result of my studying I've developed a cross-platform mobile application for automating a process of creating HTTP API requests from clients to the server."
+      "description": "My passion for coding was born in school where I began writing some simple applications using Pascal, Delphi. Later during my university period I've got acquainted with more advanced programming languages, such as C++, Kotlin, Java, JavaScript, Python, C#, Ruby.\n\nNow I am a full stack software developer. During my work experience I've used different kinds of languages and toolsets. For instance at the first job I was using Xamarin framework for developing a cross-platform chat bot. Than I used C# and ASP NET MVC for writing BE logic and JavaScript with Jquery library for FE part. Also I've used Unity for implementing a new feature for the existing game and developing a brand new AR application from scratch. Today in my work I am using C# (ASP.NET Core) and TypeScript (Angular 8).\n\nI like to learn new technologies. I have a good experience with Unity so that I even created a mobile game called \"Drag and Score\" which you can find in Google Play Store. Also during my free time I've managed to learn Flutter framework and its main language - Dart. As a result of my studying I've developed a cross-platform mobile application for automating a process of creating HTTP API requests from clients to the server."
     },
     "skills": {
       "title": "Skills",
@@ -68,13 +68,13 @@
         "position": "Full Stack Software Developer"
       },
       "pnn-soft": {
-        "description": "Maintained existing monolith WEB application, created using framework ASP NET MVC. Writing code for back-end part using C# language as well as for front-end part using a JavaScript and JQuery library. Because I have a good knowledge of Unity I also participated in two different projects where we used this engine. The first one was a runner game. Here I developed a new level by writing a new functionality and placing 3d models in a scene as a game designer. In the second project I developed a simple Augmented Reality mobile application using Unity Foundation.",
+        "description": "Maintained existing monolith WEB application, created using framework ASP NET MVC. Was writing code for back-end part using C# language as well as for front-end part using a JavaScript and JQuery library. Because I have some experience with Unity I also participated in two different projects where we used this engine. The first one was a runner game. Here I developed a new level by writing a new functionality and placing 3d models in a scene as a game designer. In the second project I developed a simple Augmented Reality mobile application using Unity Foundation.",
         "location": "Kyiv",
         "company": "PNN-Soft",
         "position": "Full Stack Software Developer"
       },
       "freelance": {
-        "description": "Developed a simple chat bot using Xamarin framework.",
+        "description": "Developed a small mobile chatbot, where the user had the opportunity to enter a command and get the necessary response from the server. In order to create this application I used Xamarin framefork, and for deployment - AppCenter. Long polling technology was used to communicate with the server. This work provided me with the necessary knowledge and practical skills in the commercial development of applications that interact with the web.",
         "location": "Kyiv",
         "company": "Freelance",
         "position": "Xamarin Developer"
@@ -86,7 +86,7 @@
         "university": "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\"",
         "specialization": "Software Engineering",
         "degree": "Master",
-        "description": "As a result of my studying in a university I have created a mobile application using cross-platform framework Flutter. This application is similar to a Swagger but for mobile platforms. It simplify the process of creating and sending HTTP API requests from clients to the servers."
+        "description": "One of the best technical universities in Ukraine. Studying here allowed me to gain both theoretical and practical skills in various areas of software development (gamedev, machine learning, web development, big data processing technologies, etc.). In the process of mastering a particular technology, many programs have been created. One of the most prominent among them is the \"OpenAPI Mobile Client \", which became my thesis of the bachelor's program."
       }
     }
   }

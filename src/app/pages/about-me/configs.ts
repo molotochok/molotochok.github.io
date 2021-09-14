@@ -28,14 +28,13 @@ export const skills: ChipGroup[] = [
       'Flutter',
       'Unity',
       'Angular 2+',
-      'React',
       'Sidekiq',
       'Xamarin'
     ],
   },
   {
     group: 'libraries',
-    texts: ['Jquery', 'ARCore'],
+    texts: ['Jquery', 'ARCore', 'Bootstrap'],
   },
 ];
 
