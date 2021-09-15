@@ -1,6 +1,6 @@
 <div class="gallery">
   <div class="gallery-content">
-    <div class="icon prev" [ngStyle]="arrowIconStyle" (click)="prevClick()"></div>
+    <div class="icon prev clickable" [ngStyle]="arrowIconStyle" (click)="prevClick()"></div>
     <div class="media-list-container" [ngStyle]="mediaListContainerStyle">
       <ul class="media-list" [ngStyle]="mediaListStyle">
         <li *ngFor="let media of mediaList; let i = index" 
@@ -12,7 +12,7 @@
         </li>
       </ul>
     </div>
-    <div class="icon" [ngStyle]="arrowIconStyle" (click)="nextClick()"></div>
+    <div class="icon clickable" [ngStyle]="arrowIconStyle" (click)="nextClick()"></div>
   </div>
   <div class="gallery-dots">
     <div 

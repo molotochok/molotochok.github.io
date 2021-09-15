@@ -1,5 +1,5 @@
 <div class="select">
-  <div *ngIf="selectedOption" class="selected-option" (click)="selectClick()">
+  <div *ngIf="selectedOption" class="selected-option clickable" (click)="selectClick()">
     <img [src]="selectedOption.iconPath">
     <label>{{selectedOption.label | i18n: i18nSourcePath}}</label>
     <div class="arrow" 
@@ -14,7 +14,7 @@
       (click)="optionClick(option)"
       *ngFor="let option of options"
     >
-      <div class="option">
+      <div class="option clickable">
         <img [src]="option.iconPath">
         {{option.label | i18n: i18nSourcePath}}
       </div>

@@ -5,8 +5,6 @@
     display: flex;
 
     .icon {
-      @include clickable(null);
-
       background-color: var(--app-text);
       width: 65px;
       height: 65px;

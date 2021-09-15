@@ -7,13 +7,17 @@
   <div class="menu-items">
     <ng-container *ngFor="let item of menu">
         <div 
-            class="menu-item" [routerLink]="item.pathname"
-            [ngClass]="isActivePage(item) ? 'menu-item-active' : ''">
+          class="menu-item" [routerLink]="item.pathname"
+          [ngClass]="isActivePage(item) ? 'menu-item-active' : ''">
             <img class="menu-item-img" [src]="getMenuItemLogoSrc(item)">
             <span class="menu-item-title">{{item.titleI18nKey | i18n: i18nMenuPath}}</span>
         </div>
     </ng-container>
     <div class="footer-parent">
+      <div class="references">
+        <a target="_blank" [href]="linkedinURI"><img class="linkedin clickable" src="assets/images/menu/linkedin.svg"></a>
+        <a target="_blank" [href]="githubURI"><img class="github clickable" src="assets/images/menu/github.png"></a>
+      </div>
       <div class="menu-item app-mb-0" (click)="settings.open()">
         <img class="menu-item-img" src="assets/images/menu/settings.svg">
         <span class="menu-item-title">{{i18nKeys.settings.title | i18n: i18nSettingsPath}}</span>

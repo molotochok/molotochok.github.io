@@ -1,7 +1,7 @@
 import { MenuItem } from '@models/menu-item.model';
 import { ROUTES } from '@router/app-routing.module';
 import { Component, OnInit } from '@angular/core';
-import { i18nMenuPath, i18nSettingsPath, i18nKeys } from './config';
+import { i18nMenuPath, i18nSettingsPath, i18nKeys, linkedinURI, githubURI } from './config';
 
 @Component({
   selector: 'app-menu',
@@ -15,6 +15,9 @@ export class MenuComponent implements OnInit {
   i18nKeys = i18nKeys;
   i18nMenuPath: string = i18nMenuPath;
   i18nSettingsPath: string = i18nSettingsPath;
+
+  linkedinURI = linkedinURI;
+  githubURI = githubURI;
 
   constructor() { }
 

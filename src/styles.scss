@@ -56,6 +56,10 @@ pre {
   filter: brightness(0.65);
 }
 
+.clickable {
+  @include clickable(null)
+}
+
 @for $i from 0 through 100 {
   .app-mr-#{$i} { margin-right: #{$i}px !important; }
   .app-ml-#{$i} { margin-left: #{$i}px !important; }
