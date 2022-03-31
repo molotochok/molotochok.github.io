@@ -2,7 +2,7 @@ import { ChipGroup } from '@models/chip-group.model';
 import { Media } from '@models/media.model';
 import { IconStyleService } from '@services/icon-style.service';
 import { Component, OnInit } from '@angular/core';
-import { i18nKeys, technologies, title, mediaList } from './config';
+import { i18nKeys, technologies, title, mediaList, playStoreLink } from './config';
 
 @Component({
   selector: 'app-openapi-mobile-client',
@@ -12,6 +12,7 @@ import { i18nKeys, technologies, title, mediaList } from './config';
 export class OpenapiMobileClientComponent implements OnInit {
 
   title: string = title;
+  playStoreLink: string = playStoreLink;
   i18nKeys: any = i18nKeys;
   technologies: ChipGroup[] = technologies;
   mediaList: Media[] = mediaList;

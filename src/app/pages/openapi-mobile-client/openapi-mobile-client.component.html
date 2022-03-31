@@ -6,7 +6,7 @@
     <span>{{title}}</span>
   </div>
   <div class="buttons">
-    <a class="app-btn download-btn disabled" target="_blank">
+    <a class="app-btn download-btn" target="_blank" [href]="playStoreLink">
       <div class="icon" [ngStyle]="downloadIconStyle"></div>
       {{i18nKeys.download | i18n: i18nSourcePath}}
     </a>

@@ -4,6 +4,8 @@ import { Image } from '@models/image.model';
 
 export const title = 'OpenAPI Mobile Client';
 
+export const playStoreLink = 'https://play.google.com/store/apps/details?id=com.MarkiianKarpaCompany.openapi_mobile_client';
+
 export const i18nKeys = {
   download: 'download',
   technologies: {
