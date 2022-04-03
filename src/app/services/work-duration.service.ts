@@ -14,7 +14,7 @@ export class DateDurationService {
     const start = formatDate(startDate, format, locale);
     const end = endDate
       ? formatDate(endDate, format, locale)
-      : 'present';
+      : '...';
 
     const months = this.monthDuration(startDate, endDate);
     const duration = showDuration
