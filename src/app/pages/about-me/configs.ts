@@ -48,10 +48,17 @@ const workExperienceI18nKeys = {
 
 export const workExperiences: ListTile[] = [
   {
+    key: 'amazon',
+    logo: baseImgPath + 'work-experience/amazon.png',
+    startDate: new Date('2022-03'),
+    endDate: null,
+    ...workExperienceI18nKeys
+  },
+  {
     key: 'data-art',
     logo: baseImgPath + 'work-experience/data-art.png',
     startDate: new Date('2021-02'),
-    endDate: null,
+    endDate: new Date('2022-02'),
     ...workExperienceI18nKeys
   },
   {

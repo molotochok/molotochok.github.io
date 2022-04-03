@@ -55,6 +55,12 @@
     },
     "work-experiences": {
       "title": "Work Experience",
+      "amazon": {
+        "description": "",
+        "location": "Barcelona",
+        "company": "Amazon",
+        "position": "Software Development Engineer"
+      },
       "data-art": {
         "description": "Working with the project which is written using Ruby on Rails framework. Integrating this project to the main system which is based on .NET technologies.\nUsing the following technologies: Ruby on Rails, Sidekiq, RSpec, React, ASP.NET Core, PostgreSQL, T-SQL, MongoDB.\nOn this project I communicate with clients a lot (even more than on my previous project) since they are a part of our dev team.",
         "location": "Kyiv/Remote",
