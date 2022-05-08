@@ -31,6 +31,7 @@ import { DasDemoComponent } from '@components/das-demo/das-demo.component';
 import { GalleryComponent } from '@components/gallery/gallery.component';
 import { SettingsComponent } from '@components/settings/settings.component';
 import { SelectComponent } from '@components/select/select.component';
+import { DrawOnTimeComponent } from './pages/draw-on-time/draw-on-time.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SelectComponent } from '@components/select/select.component';
     GalleryComponent,
     SettingsComponent,
     SelectComponent,
+    DrawOnTimeComponent,
   ],
   imports: [
     BrowserModule,

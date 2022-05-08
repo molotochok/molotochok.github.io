@@ -1,6 +1,7 @@
 import { ChipGroup } from '@models/chip-group.model';
 import { Media } from '@models/media.model';
 import { Image } from '@models/image.model';
+import { Video } from '@models/video.model';
 
 export const title = 'OpenAPI Mobile Client';
 
@@ -28,5 +29,6 @@ const imageAddressTemplate = (index: number) => `assets/images/openapi-mobile-cl
 const mediaWidth = 280;
 const mediaHeight = 600;
 export const mediaList: Media[] = [
+  new Video('https://www.youtube.com/embed/ZLp4-Cy_hUQ', mediaWidth, mediaHeight),
   ...[...Array(12).keys()].map(n => new Image(imageAddressTemplate(n + 1), mediaWidth, mediaHeight))
 ];

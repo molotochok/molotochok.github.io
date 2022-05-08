@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { OpenapiMobileClientComponent } from '@pages/openapi-mobile-client/openapi-mobile-client.component';
 import { AboutMeComponent } from '@/app/pages/about-me/about-me.component';
 import { DragAndScoreComponent } from '@pages/drag-and-score/drag-and-score.component';
+import { DrawOnTimeComponent } from '../pages/draw-on-time/draw-on-time.component';
 
 export const ROUTES: Routes = [
   {
@@ -24,6 +25,13 @@ export const ROUTES: Routes = [
     component: DragAndScoreComponent,
     data: {
       titleI18nKey: 'drag-and-score'
+    }
+  },
+  {
+    path: 'draw-on-time',
+    component: DrawOnTimeComponent,
+    data: {
+      titleI18nKey: 'draw-on-time'
     }
   },
 ];

@@ -1,0 +1,29 @@
+<div class="draw-on-time app-project-page">
+  <div class="logo">
+    <img src="assets/images/draw-on-time/logo.png">
+  </div>
+  <div class="title">
+    <span>{{title}}</span>
+  </div>
+  <div class="buttons">
+    <a class="app-btn" target="_blank" [href]="itchioLink">
+      <div class="icon"></div>
+      {{i18nKeys.play | i18n: i18nSourcePath}}
+    </a>
+  </div>
+  <div class="description">
+    <app-group [title]="i18nKeys.description.title | i18n: descriptioni18nPath">
+      <ng-template>
+        <pre>{{i18nKeys.description.content | i18n: descriptioni18nPath}}</pre>
+      </ng-template>
+    </app-group>
+  </div>
+  <div class="technologies">
+    <app-chips 
+      [i18nSourcePath]="technologiesi18nPath"
+      [title]="i18nKeys.technologies.title  | i18n: technologiesi18nPath" 
+      [groups]="technologies"
+    ></app-chips>
+  </div>
+  <app-gallery [mediaList]="mediaList"></app-gallery>
+</div>
